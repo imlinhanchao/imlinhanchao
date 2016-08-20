@@ -1,12 +1,10 @@
 ---
 author: hancel.lin
-head: /blog/img/logo/logo_128x128.png
 date: 2012-1-15
 title: 使用CStdioFile操作文件
 tags: C++, CFile, Create, CStdioFile, file, mode, Read, Write
 category: tech
 layout: default
-summary: 前阵子做毕业设计，需要用到一些对本地文件的操作，没有使用传统的CFile，用了CFile的继承类CStdioFile，感觉简易直接许多。下面简单介绍一下一些比较常用的文件操作...
 ---
 前阵子做毕业设计，需要用到一些对本地文件的操作，没有使用传统的CFile，用了`CFile`的继承类`CStdioFile`，感觉简易直接许多。下面简单介绍一下一些比较常用的文件操作：
 

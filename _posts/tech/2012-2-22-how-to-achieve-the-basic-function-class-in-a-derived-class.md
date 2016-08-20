@@ -1,12 +1,10 @@
 ---
 author: hancel.lin
-head: /blog/img/logo/logo_128x128.png
 date: 2012-2-22
 title: 如何在派生类中实现类的基本函数
 tags: C++, 构造函数, 析构函数, 派生类, 继承, 赋值函数
 category: tech
 layout: default
-summary: sizeof是一个在C语言里常被人误会的的东西。许多人的以为它是个函数，其实不然。只要查一下 C语言保留关键字列表，就会发现sizeof赫然在表上。或者查一下C语言运算符优先级方面的资料，也可以在里面发现sizeof的身影。...
 ---
 基类的构造函数、析构函数、赋值函数都不能被派生类继承。如果类之间存在继承关系，在编写上述基本函数时应注意以下事项：
 

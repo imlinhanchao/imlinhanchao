@@ -1,12 +1,10 @@
 ---
 author: hancel.lin
-head: /blog/img/logo/logo_128x128.png
 date: 2011-10-13
 title: 关于sizeof与&a的疑问
 tags: C语言, sizeof, 指针, 数组
 category: tech
 layout: default
-summary: sizeof是一个在C语言里常被人误会的的东西。许多人的以为它是个函数，其实不然。只要查一下 C语言保留关键字列表，就会发现sizeof赫然在表上。或者查一下C语言运算符优先级方面的资料，也可以在里面发现sizeof的身影。...
 ---
 `sizeof`是一个在C语言里常被人误会的的东西。许多人的以为它是个函数，其实不然。只要查一下 [C语言保留关键字列表](http://zh.wikipedia.org/wiki/C%E8%AF%AD%E8%A8%80#.E4.BF.9D.E7.95.99.E5.85.B3.E9.94.AE.E5.AD.97)，就会发现`sizeof`赫然在表上。或者查一下C语言运算符优先级方面的资料，也可以在里面发现`sizeof`的身影。
 
