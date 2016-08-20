@@ -1,1 +1,4 @@
-baseurl: .
+webrick:
+  headers:
+    My-Header: Hancel's Blog
+    My-Other-Header: just make fun~
