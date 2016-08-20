@@ -20,7 +20,7 @@ int main()
     printf("%d", l);  
     return 0;
 }  
-```
+{% endhighlight %}
 
 你会发现，原来这样也是可以的！那么如果把第二句的`sizeof n`换成`sizeof int`。又会如何呢？大家可以去试一下。
 
@@ -36,7 +36,7 @@ int main()
     printf("%d, %d", sizeof(&n), sizeof(&c));  
     return 0;
 }  
-```
+{% endhighlight %}
 输出结果都是`4`。
 但是，如果将程序改变一下：
 
@@ -47,7 +47,7 @@ int main()
     char c[5];  
     printf("%d,%d",sizeof(&a),sizeof(&c));  
 }  
-```
+{% endhighlight %}
 这样，他们输出的结果就不同了，变成了 `20,5` 。在Turbo C 中则是 `10,5` 。
 
 这是肿么了？！

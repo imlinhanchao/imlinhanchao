@@ -31,14 +31,14 @@ C语言通常使用`scanf`处理输入，如果要读取字符串，那么就需
 {% highlight c %}
 char* str;
 char* _str;
-```
+{% endhighlight %}
 
 先给其中一个分配2个`char`的内存空间(一个用来存`\0`)，同时用i来记录输入字符串的个数。
 
 {% highlight c %}
 int i = 1;
 str = (char*)malloc(sizeof(char) * (i + 1));
-```
+{% endhighlight %}
 
 然后，再用循环读取字符，并把它存到申请的内存空间。
 
@@ -48,7 +48,7 @@ while('\n' != (str[i - 1] = getchar()))
      i++;
      ...
 }
-```
+{% endhighlight %}
 
 每次我们读取到一个字符时，就将`i`加一。所以循环体开始的时候是`i++`（刚读完一个字符）。
 
@@ -70,7 +70,7 @@ if(NULL == str)
 }
 strcpy(str, _str);
 free(_str);
-```
+{% endhighlight %}
 
 值得注意的是，在给`str`重新申请内存空间后，需要判断一下`str`内存申请是否成功。如果失败（`NULL == str`），我们需要先将`_str`释放掉（防止出现内存泄漏），再`return NULL`。
 
@@ -79,7 +79,7 @@ free(_str);
 {% highlight c %}
 str[i - 1]='\0';
 return str;
-```
+{% endhighlight %}
 
 附上完整代码：
 
@@ -110,4 +110,4 @@ char* getstr()
         str[i - 1] = '\0';
         return str;
 }
-```
+{% endhighlight %}

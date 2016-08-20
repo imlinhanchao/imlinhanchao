@@ -15,7 +15,7 @@ summary: 前阵子做毕业设计，需要用到一些对本地文件的操作�
 
 {% highlight cpp %}
 file.Open(sFileName, CFile::modeCreate | CFile::modeReadWrite | CFile::modeNoTruncate);  
-```
+{% endhighlight %}
 
 打开文件主要需要传入两个参数，`sFileName`——文件名；文件打开模式。
 几种比较常见的文件打开模式：
@@ -30,7 +30,7 @@ file.Open(sFileName, CFile::modeCreate | CFile::modeReadWrite | CFile::modeNoTru
 
 {% highlight cpp %}
 file.ReadString(sLine);  
-```
+{% endhighlight %}
 
 将文件逐行读出，写入到`sLine`字符串里。
 如果需要读出文件所有内容，可以用下面的方法：
@@ -40,7 +40,7 @@ while(file.ReadString(sLine))
 {  
     sFileData += sLine + "\r\n";  
 }  
-```
+{% endhighlight %}
 这里用`\r\n`来为字符串加上换行。
 
 写入文件
@@ -48,7 +48,7 @@ while(file.ReadString(sLine))
 
 {% highlight cpp %}
 file.WriteString(sLine);  
-```
+{% endhighlight %}
 
 这里很值得注意一下，如果文件的打开模式设置了`CFile::modeNoTruncate`，那么字符串将以追加的形式写入，并且是从文件指针现在所处位置写起。
 比如：
@@ -70,7 +70,7 @@ file.ReadString(sLine);
 file.Close();  
 
 MessageBox(sLine);  
-```
+{% endhighlight %}
 最终将弹出`abc4567890`
 那么如果我们其实是想写入在文件末尾，即弹出`1234567890abc`，那该如何？
 只要在`file.WriteString("abc");`前加入一句`file.SeekToEnd();`。这一句的作用在于将文件指针移动到文件末尾。
@@ -81,4 +81,4 @@ MessageBox(sLine);
 
 {% highlight cpp %}
 file.Close();  
-```
+{% endhighlight %}

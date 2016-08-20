@@ -28,7 +28,7 @@ summary: 某日，忽的想写个js小控件。功能很简单，就是可以在
         <div class="megbox_txt">提示文字..</div>
     </div>
 </div>
-```
+{% endhighlight %}
 
 HTML模型包含两个部分，提示文字和一个啥也没有是div，那个div就是用来显示提示消息上方的小三角的~因此，我们还需要一些CSS来定义赋予样式。
 
@@ -54,7 +54,7 @@ HTML模型包含两个部分，提示文字和一个啥也没有是div，那个d
     line-height: 20px;
 }
 .megbox_txt{}/* 暂且保留，说不定以后加点什么样式~~ */
-```
+{% endhighlight %}
 
 CSS一共需要调用到两张背景图：![尖端][3]　![warning][4]
 
@@ -92,7 +92,7 @@ MessageBox = function(element, id, message)
     this.element = element;
     this.id = id;
 };
-```
+{% endhighlight %}
 接着就是完成两个方法了~
 
 Show——首先要解决两个问题：
@@ -151,7 +151,7 @@ document.getElementTop = function (element)
     }
     return actualTop;
 };
-```
+{% endhighlight %}
 
 把他们都作为document方法加进入了~这样似乎不太好，最安全的做法应该是作为MessageBox的私有方法。不过个人喜欢啦~
 
@@ -210,7 +210,7 @@ MessageBox.prototype = {
         return false;
     }   
 };
-```
+{% endhighlight %}
 
 因为提示框显示在目标元素下方，因此提示框绝对定位的
 
@@ -230,7 +230,7 @@ Box.Show(); // Show the MessageBox
 // -----------------------------------
 
 if(Box instanceof MessageBox) Box.Remove(); // Remove MessageBox
-```
+{% endhighlight %}
 最后
 ---
 最后，附上增强版MessageBox——[下载地址››](http://pan.baidu.com/share/link?shareid=1309283857&uk=1460016148)

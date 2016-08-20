@@ -33,13 +33,13 @@ void main(void)
    Base * pB = new Derived; // upcast  
    delete pB;  
 }  
-```
+{% endhighlight %}
 
 输出结果为：
-```
+{% endhighlight %}
 ~Derived
 ~Base
-```
+{% endhighlight %}
 如果析构函数不为虚，那么输出结果为
 `~Base`
 在编写派生类的赋值函数时，注意不要忘记对基类的数据成员重新赋值。例如：
@@ -76,4 +76,4 @@ Derived & Derived::operate =(const Derived &other)
    //(4)返回本对象的引用  
    return *this;  
 }  
-```
+{% endhighlight %}
