@@ -235,8 +235,8 @@ if(Box instanceof MessageBox) Box.Remove(); // Remove MessageBox
 ---
 最后，附上增强版MessageBox——[下载地址››](http://pan.baidu.com/share/link?shareid=1309283857&uk=1460016148)
 
-  [1]: ../img/js-ballon-plugin/pic_01.jpg
-  [2]: ../img/js-ballon-plugin/pic_02.jpg
-  [3]: ../img/js-ballon-plugin/pic_03jpg
-  [4]: ../img/js-ballon-plugin/pic_04.jpg
-  [5]: ../img/js-ballon-plugin/pic_05.jpg
+  [1]: /img/js-ballon-plugin/pic_01.jpg
+  [2]: /img/js-ballon-plugin/pic_02.jpg
+  [3]: /img/js-ballon-plugin/pic_03jpg
+  [4]: /img/js-ballon-plugin/pic_04.jpg
+  [5]: /img/js-ballon-plugin/pic_05.jpg

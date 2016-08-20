@@ -20,7 +20,7 @@ summary: 長久以來，我想做成一件事兒，就是在U盤或移動硬盤�
 
 我們將DOS盤作為啟動盤，啟動grub程式，加載menu.lst。[grub](https://zh.wikipedia.org/wiki/GNU_GRUB)是linux下的一支启动引导程序，在這裡我們使用他來引導各個系統。對linux和Windows引導方式各有不同。linux主要通過加載Linux的內核來進行引導，而Windows則有自己的啟動器，所以事實上我們是通過加載Windows的啟動器([bootmgr](https://zh.wikipedia.org/wiki/Windows_Boot_Manager))來進行引導。
 
-![原理图](../img/vmware-to-win-linux/pic_01.jpg)
+![原理图](/img/vmware-to-win-linux/pic_01.jpg)
 
 開始準備
 ---
@@ -49,35 +49,35 @@ summary: 長久以來，我想做成一件事兒，就是在U盤或移動硬盤�
 
 首先，**備份好U盤或移動硬盤的所有數據！**然後刪除所有分區，將硬盤分出大約100MB的空間格式化為FAT32的格式（不必太多，我的加上TC才14M）。移動硬盤只要用Windows的磁盤管理就行了，U盤就需要DiskGenius來分區了（請不要分配驅動號）。
 
-![DOS分区](../img/vmware-to-win-linux/pic_02.jpg)
+![DOS分区](/img/vmware-to-win-linux/pic_02.jpg)
 
 然後，啟動虛擬機，創建一個windows7虛擬系統。把移動硬盤添加到虛擬機裏面：
 
 1.選擇“Edit virtual machine setting”，添加一個硬盤：
 
-![edit setting](../img/vmware-to-win-linux/pic_03.jpg)
+![edit setting](/img/vmware-to-win-linux/pic_03.jpg)
 
-![add hardware](../img/vmware-to-win-linux/pic_04.jpg)
+![add hardware](/img/vmware-to-win-linux/pic_04.jpg)
 
-![hard disk](../img/vmware-to-win-linux/pic_05.jpg)
+![hard disk](/img/vmware-to-win-linux/pic_05.jpg)
 
 然後選擇“use a physical disk”，Device選擇你的移動硬盤，通常是最後一個（如果你只接入一個移動硬盤的話）。
 
-![add physical disk](../img/vmware-to-win-linux/pic_06.jpg)
+![add physical disk](/img/vmware-to-win-linux/pic_06.jpg)
 
-![choose Device](../img/vmware-to-win-linux/pic_07.jpg)
+![choose Device](/img/vmware-to-win-linux/pic_07.jpg)
 
 剩下的默認就好了。然後就可以在硬體列表中看到添加的磁盤，容量看對一下，應該就沒錯了。
 
-![compare](../img/vmware-to-win-linux/pic_08.jpg)
+![compare](/img/vmware-to-win-linux/pic_08.jpg)
 
 然後，選擇“Floppy”，選擇下載的DOS img。記得勾上“connect at Power on”。**接著把創建虛擬機時創建的虛擬硬盤移除。**
 
-![floppy setting](../img/vmware-to-win-linux/pic_09.jpg)
+![floppy setting](/img/vmware-to-win-linux/pic_09.jpg)
 
 然後啟動虛擬機，就會進入DOS系統的安裝，如果提示要插入第二塊軟驅，就“Disconnect”掉Floppy，然後進入“Setting”選擇“DOS71_2.img”，再Connect上繼續就好了。其他沒啥可說的。
 
-![dos second disk](../img/vmware-to-win-linux/pic_10.jpg)
+![dos second disk](/img/vmware-to-win-linux/pic_10.jpg)
 
 按裝完後，如果不做任何修改，這樣的DOS盤也就只能在虛擬機裏面啟動而已了。在實際的電腦上啟動就會報錯，原因我還沒找到，不過可以做一些修改解決這個問題：
 
@@ -103,11 +103,11 @@ summary: 長久以來，我想做成一件事兒，就是在U盤或移動硬盤�
 
 如下圖：
 
-![no-install-grub](../img/vmware-to-win-linux/pic_11.jpg)
+![no-install-grub](/img/vmware-to-win-linux/pic_11.jpg)
 
-![std part](../img/vmware-to-win-linux/pic_12.jpg)
+![std part](/img/vmware-to-win-linux/pic_12.jpg)
 
-![sda5](../img/vmware-to-win-linux/pic_13.jpg)
+![sda5](/img/vmware-to-win-linux/pic_13.jpg)
 
 安裝完成後，當然是進不去Linux系統的~~所以，我們就要——
 
@@ -115,7 +115,7 @@ summary: 長久以來，我想做成一件事兒，就是在U盤或移動硬盤�
 ---
 這個時候啟動應該是進入DOS系統，
 
-![dos_begin](../img/vmware-to-win-linux/pic_14.jpg)
+![dos_begin](/img/vmware-to-win-linux/pic_14.jpg)
 
 啟動DOS後：
 
@@ -126,7 +126,7 @@ grub.exe
 
 這樣就可以啟動grub了（啟動grub後，切記不要移動鼠標，不然就會死機），啟動後畫面如下：
 
-![grub view](../img/vmware-to-win-linux/pic_15.jpg)
+![grub view](/img/vmware-to-win-linux/pic_15.jpg)
 
 選擇commandline，現在我們需要去加載Linux的內核，內核是位於boot目錄下，從我們剛才安裝的畫面可以看出，boot分區是另外獨立一塊空間。
 
@@ -138,7 +138,7 @@ cat (hd0,
 
 然後按下Tab鍵，可以看到有3個xfs分區，第一個通常就是boot分區。
 
-![grub_01](../img/vmware-to-win-linux/pic_16.jpg)
+![grub_01](/img/vmware-to-win-linux/pic_16.jpg)
 
 ```bash
 cat (hd0,1)/
@@ -146,11 +146,11 @@ cat (hd0,1)/
 
 同樣按下Tab鍵，就可以看到這個分區下的文件，其中vmlinuz-3.10.0-123.el7.x86_64就是Linux的內核，不同版本的Linux應該會有所不同。這就說明了這個就是boot分區
 
-![grub_02](../img/vmware-to-win-linux/pic_17.jpg)
+![grub_02](/img/vmware-to-win-linux/pic_17.jpg)
 
 在用同樣的方法查看其他分區，找到分區下包含dev文件夾的目錄。
 
-![grub_03](../img/vmware-to-win-linux/pic_18.jpg)
+![grub_03](/img/vmware-to-win-linux/pic_18.jpg)
 
 然後將其設置為根目录
 
@@ -180,7 +180,7 @@ boot
 
 至此，你就成功引導了linux系統~
 
-![grub_04](../img/vmware-to-win-linux/pic_19.jpg)
+![grub_04](/img/vmware-to-win-linux/pic_19.jpg)
 
 可是！難道每次我們進入系統都有打這麼一長串嗎？當然不是。我們現將liunx關機，然後**將grub裏面的menu.lst文件拷貝到DOS盤的根目錄**，然後在文件最後面加入：
 
@@ -208,7 +208,7 @@ call \grub\grub.exe
 
 現在我們要把他重新添加回來，和添加移動硬盤略有不同，選擇“Use an existing virtual disk”，然後選那個磁盤文件就可以了。
 
-![win7_back](../img/vmware-to-win-linux/pic_20.jpg)
+![win7_back](/img/vmware-to-win-linux/pic_20.jpg)
 
 然後在CD/DVD選擇一個Windows7的鏡像就可以了。在那個虛擬系統裏面安裝一個Win7系統即可。
 
@@ -218,7 +218,7 @@ call \grub\grub.exe
 
 為了把在虛擬機安裝好的Windows7轉移到移動硬盤上，我們就需要用Ghost，把Windows7 Ghost下來，然後在移動硬盤上還原。但是，當前Windows7是運行中的，所以必須進入到DOS下再對Windows7進行Ghost，那麼我們可以在啟動虛擬機時，按下F2鍵，進入BIOS設定，在boot設定DOS盤先啟動：
 
-![bios setting](../img/vmware-to-win-linux/pic_21.jpg)
+![bios setting](/img/vmware-to-win-linux/pic_21.jpg)
 
 進入dos後，運行Ghost文件夾裏的ghost11.exe
 
@@ -229,17 +229,17 @@ ghost11.exe
 
 進入ghost，選擇local&gt;Partition&gt;To Image
 
-![ghost01.jpg](../img/vmware-to-win-linux/pic_22.jpg)
+![ghost01.jpg](/img/vmware-to-win-linux/pic_22.jpg)
 
 再選擇對應硬盤，與磁盤，再選擇保存在剛才新建的盤即可。
 
-![ghost06](../img/vmware-to-win-linux/pic_23.jpg)
+![ghost06](/img/vmware-to-win-linux/pic_23.jpg)
 
 **注意要把系統保留分區一併Ghost**
 
-![ghost07](../img/vmware-to-win-linux/pic_24.jpg)
+![ghost07](/img/vmware-to-win-linux/pic_24.jpg)
 
-![ghost08](../img/vmware-to-win-linux/pic_25.jpg)
+![ghost08](/img/vmware-to-win-linux/pic_25.jpg)
 
 待Ghost完畢，在進入Windows，在移動硬盤新建一個分區原來存放Windows，啟動DOS盤中的Ghost32將Windows恢復到移動磁盤的分區中。
 
@@ -247,23 +247,23 @@ local>Partition>From Image
 
 選擇恢復時，無需恢復系統保留區的文件，只要選擇系統分區即可：
 
-![ghost03](../img/vmware-to-win-linux/pic_26.jpg)
+![ghost03](/img/vmware-to-win-linux/pic_26.jpg)
 
 但是！這樣恢復後，實際上Windows是沒有任何引導的。
 
 所以，我們需要把系統保留區裏的啟動文件提取出來，使用Ghost裏面的Ghostexp.exe打開備份的Ghost文件。將引導文件提取出來，拷貝到恢復的Windows磁盤裏。
 
-![ghost09](../img/vmware-to-win-linux/pic_27.jpg)
+![ghost09](/img/vmware-to-win-linux/pic_27.jpg)
 
 然後，我們還需要修改一下裏面的BCD文件，BCD文件記錄的是與Windows啟動相關的信息（當然不會是文本的）。我們要使用bootice來修改：
 
 選擇BCD編輯，選擇其他BCD文件，瀏覽剛剛恢復的Windows盤，選擇其中Boot的BCD文件：
 
-![BCD Edit](../img/vmware-to-win-linux/pic_28.jpg)
+![BCD Edit](/img/vmware-to-win-linux/pic_28.jpg)
 
 編輯“啟動磁盤”和“啟動分區”，選中BCD文件所在分區。保存即可。
 
-![Setting boot disk](../img/vmware-to-win-linux/pic_29.jpg)
+![Setting boot disk](/img/vmware-to-win-linux/pic_29.jpg)
 
 至此，我們的Windows就安裝好了~那麼，接下來就是——
 
