@@ -21,7 +21,7 @@ summary: 某日，忽的想写个js小控件。功能很简单，就是可以在
 ---
 
 首先第一步，该是要构建一个提示文字的HTML模型，那么弹出提示时就可以被重复构建了（如上图）。
-```html
+{% highlight html %}
 <div class="megbox">
     <div class="megbox_top"></div>
     <div class="megbox_meg">
@@ -32,7 +32,7 @@ summary: 某日，忽的想写个js小控件。功能很简单，就是可以在
 
 HTML模型包含两个部分，提示文字和一个啥也没有是div，那个div就是用来显示提示消息上方的小三角的~因此，我们还需要一些CSS来定义赋予样式。
 
-```css
+{% highlight css %}
 .megbox{
     position: absolute;
     background-color: #FFF;
@@ -80,7 +80,7 @@ Remove：移除气泡；
 
 OK，首先写个构造函数，这个类就叫MessageBox吧~
 
-```javascript
+{% highlight javascript %}
 MessageBox = function(element, id, message)
 {
     // Init value
@@ -109,7 +109,7 @@ Show——首先要解决两个问题：
 
 略做修改后，如下：
 
-```javascript
+{% highlight javascript %}
 document.getElementView = function (element)
 {
     if(element != document)
@@ -159,7 +159,7 @@ Remove的话就是把创建的元素删除而已~
 
 最后方法定义如下：
 
-```javascript
+{% highlight javascript %}
 MessageBox.prototype = {
 
     constructor : MessageBox, // 声明构造函数
@@ -222,7 +222,7 @@ top = node_top + node_view.height + 5 ;（如下图）
 
 如此，气泡提示控件就完成了，调用时如下：
 
-```javacript
+{% highlight javacript %}
 var test = document.getElementById("test");
 var Box = new MessageBox(test, 1, "Test Message..");
 Box.Show(); // Show the MessageBox

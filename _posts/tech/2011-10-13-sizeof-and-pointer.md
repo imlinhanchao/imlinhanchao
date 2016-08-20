@@ -12,7 +12,7 @@ summary: sizeof是一个在C语言里常被人误会的的东西。许多人的�
 
 不过，也难怪人们会误会`sizeof`是个函数，谁叫它的身后总是跟着一对括号呢~那么大家可以去试编译下面这个程序:
 
-```c
+{% highlight c %}
 int main()  
 {  
     int n, l;  
@@ -28,7 +28,7 @@ int main()
 
 我们知道，在C语言里，无论是什么指针变量，其空间总是占有**4**个字节。也就是说：
 
-```c
+{% highlight c %}
 int main()  
 {  
     int n;  
@@ -40,7 +40,7 @@ int main()
 输出结果都是`4`。
 但是，如果将程序改变一下：
 
-```c
+{% highlight c %}
 int main()  
 {  
     int a[5];  

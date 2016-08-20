@@ -119,10 +119,10 @@ summary: 長久以來，我想做成一件事兒，就是在U盤或移動硬盤�
 
 啟動DOS後：
 
-```bash
+{% highlight bash %}
 cd grub
 grub.exe
-```
+{% endhighlight %}
 
 這樣就可以啟動grub了（啟動grub後，切記不要移動鼠標，不然就會死機），啟動後畫面如下：
 
@@ -132,17 +132,17 @@ grub.exe
 
 先用cat指令查看硬盤分區（**cat後面有空格**）：
 
-```bash
+{% highlight bash %}
 cat (hd0,
-```
+{% endhighlight %}
 
 然後按下Tab鍵，可以看到有3個xfs分區，第一個通常就是boot分區。
 
 ![grub_01](/img/vmware-to-win-linux/pic_16.jpg)
 
-```bash
+{% highlight bash %}
 cat (hd0,1)/
-```
+{% endhighlight %}
 
 同樣按下Tab鍵，就可以看到這個分區下的文件，其中vmlinuz-3.10.0-123.el7.x86_64就是Linux的內核，不同版本的Linux應該會有所不同。這就說明了這個就是boot分區
 
@@ -154,29 +154,29 @@ cat (hd0,1)/
 
 然後將其設置為根目录
 
-```bash
+{% highlight bash %}
 root (hd0,4)
-```
+{% endhighlight %}
 
 然後用kernel命令加載Linux內核
 
-```bash
+{% highlight bash %}
 kernel (hd0,1)/vmlinuz-3.10.0-123.e17.x86_64 ro root=/dev/sda5
-```
+{% endhighlight %}
 
 按Tab可以補全文件名，上面指令中的sda5，就是最早我們在安裝時記錄根目錄的設備名。
 
 接著設置initrd文件：
 
-```bash
+{% highlight bash %}
 initrd (hd0,1)/initramfs-3.10.0-123.el7.x86_64.img
-```
+{% endhighlight %}
 
 然後就可以引導了。
 
-```bash
+{% highlight bash %}
 boot
-```
+{% endhighlight %}
 
 至此，你就成功引導了linux系統~
 
@@ -184,19 +184,19 @@ boot
 
 可是！難道每次我們進入系統都有打這麼一長串嗎？當然不是。我們現將liunx關機，然後**將grub裏面的menu.lst文件拷貝到DOS盤的根目錄**，然後在文件最後面加入：
 
-```bash
+{% highlight bash %}
 title CentOS
 root (hd0,4)
 kernel (hd0,1)/vmlinuz-3.10.0-123.e17.x86_64 ro root=/dev/sda5
 initrd (hd0,1)/initramfs-3.10.0-123.el7.x86_64.img
 boot
-```
+{% endhighlight %}
 
 然後在autoexec.bat最後一行加上
 
-```bash
+{% highlight bash %}
 call \grub\grub.exe
-```
+{% endhighlight %}
 
 在啟動DOS時，就可以看到CentOS選項了。以後只要通過這個選項就可以啟動CentOS了。
 
@@ -222,10 +222,10 @@ call \grub\grub.exe
 
 進入dos後，運行Ghost文件夾裏的ghost11.exe
 
-```bash
+{% highlight bash %}
 cd ghost
 ghost11.exe
-```
+{% endhighlight %}
 
 進入ghost，選擇local&gt;Partition&gt;To Image
 
@@ -272,38 +272,38 @@ local>Partition>From Image
 
 bootmgr是引導Windows的入口，那麼啟動根目錄就要設置為bootmgr所在的分區，可以直接使用
 
-```bash
+{% highlight bash %}
 root (hd0,6)
-```
+{% endhighlight %}
 
 設置根目錄，但其實下面這樣會更合理
 
-```bash
+{% highlight bash %}
 find --set-root /bootmgr
-```
+{% endhighlight %}
 
 找到bootmgr然後把其所在分區設置為根目錄。
 
 然後，將bootmgr裝載進來：
 
-```bash
+{% highlight bash %}
 chainloader /bootmgr
-```
+{% endhighlight %}
 
 然後就可以啦~
 
 那麼在menu.lst裏就是添加：
 
-```bash
+{% highlight bash %}
 title Windows 7
 find --set-root /bootmgr
 chainloader /bootmgr
-```
+{% endhighlight %}
 
 至此，DOS+Linux+Windows移動系統硬盤就搭建完畢啦~\*:‧\\(￣▽￣)/‧:\*
 最後，附上我的menu.lst文件
 
-```bash  
+{% endhighlight %}bash  
 # This is a sample menu.lst file. You should make some changes to it.  
 # The old install method of booting via the stage-files has been removed.  
 # Please install GRLDR boot strap code to MBR with the bootlace.com  
@@ -338,4 +338,4 @@ reboot
 title Halt
 savedefault --wait=2
 halt
-```
+{% endhighlight %}

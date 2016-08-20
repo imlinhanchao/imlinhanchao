@@ -14,7 +14,7 @@ summary: sizeof是一个在C语言里常被人误会的的东西。许多人的�
 
 基类与派生类的析构函数应该为虚（即加`virtual`关键字）。例如：
 
-```cpp
+{% highlight cpp %}
 #include<iostream.h>  
 class Base  
 {  
@@ -44,7 +44,7 @@ void main(void)
 `~Base`
 在编写派生类的赋值函数时，注意不要忘记对基类的数据成员重新赋值。例如：
 
-```cpp
+{% highlight cpp %}
 class Base  
 {  
    public:  
