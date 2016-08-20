@@ -5,7 +5,7 @@ date: 2013-12-15
 title: 读取不定长字符串输入
 tags: C语言,字符串,输入
 category: tech
-status: publish
+layout: default
 summary: C语言通常使用`scanf`处理输入，如果要读取字符串，那么就需要定义一个字符数组（`char[]`）。可是，如果数组定义长度不足，就可能发生溢出。
 
 在C语言里有个可以用来读取字符的函数(`getchar`)，我们可以利用这个函数来实现不定长的字符串输入...

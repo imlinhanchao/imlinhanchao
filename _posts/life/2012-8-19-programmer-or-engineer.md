@@ -5,7 +5,7 @@ date: 2012-8-19
 title: 程序员还是工程师？
 tags: 工作, 工程师, 程序员
 category: life
-status: publish
+layout: default
 summary: 在技嘉工作的第一个项目，就算暂告一段落了。分享一下这一个月来的心得体会。
 ---
 在技嘉工作的第一个项目，就算暂告一段落了。分享一下这一个月来的心得体会。

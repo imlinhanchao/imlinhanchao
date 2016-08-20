@@ -5,7 +5,7 @@ date: 2011-04-03
 title: C语言实现月历
 tags: C语言, 编程, 月历
 category: tech
-status: publish
+layout: default
 summary: 这是大一时做的一个用C语言实现的月历程序。
 ---
 

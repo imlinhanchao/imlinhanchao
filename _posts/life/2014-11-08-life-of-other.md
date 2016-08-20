@@ -5,7 +5,7 @@ date: 2014-11-08
 title: 他人的人生
 tags: 讀書
 category: life
-status: publish
+layout: default
 summary: 這一週看完了兩本傳記，一本是林納斯的，一本是王小波。
 ---
 這一週看完了兩本傳記，一本是林納斯的，一本是王小波。

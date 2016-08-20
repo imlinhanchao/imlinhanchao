@@ -6,7 +6,7 @@ title: 一个气泡提示的Javascript控件
 tags: javascript,Web,控件
 images: /blog/img/js-ballon-plugin/01.jpg
 category: tech
-status: publish
+layout: default
 summary: 某日，忽的想写个js小控件。功能很简单，就是可以在文本框下面显示一个气泡提示，如上图。图是Chrome里截来的，是Chrome原生的提示样式。只要在文本框启用『required』，提交时内容为空时就会出现如图提示...
 ---
 源起

@@ -6,7 +6,7 @@ title: 如何用VMware在U盤上安裝Windows和Linux系統的
 tags: VMware,Windows,Linux,操作系统
 images: /blog/img/vmware-to-win-linux/01.jpg
 category: tech
-status: publish
+layout: default
 summary: 長久以來，我想做成一件事兒，就是在U盤或移動硬盤上安裝Window和linux，這樣我就可以到任何一台電腦上使用我的開發平臺了。這件事兒，終於在上週完全的實驗成功了。
 ---
 
