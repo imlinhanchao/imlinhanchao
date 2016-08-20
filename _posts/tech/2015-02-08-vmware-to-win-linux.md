@@ -301,7 +301,7 @@ chainloader /bootmgr
 至此，DOS+Linux+Windows移動系統硬盤就搭建完畢啦~\*:‧\\(￣▽￣)/‧:\*
 最後，附上我的menu.lst文件
 
-{% endhighlight %}bash  
+{% highlight bash %} 
 # This is a sample menu.lst file. You should make some changes to it.  
 # The old install method of booting via the stage-files has been removed.  
 # Please install GRLDR boot strap code to MBR with the bootlace.com  
