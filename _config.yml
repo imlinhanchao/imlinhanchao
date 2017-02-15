@@ -2,6 +2,11 @@ webrick:
   headers:
     My-Header: Hancel's Blog
     My-Other-Header: just make fun~
+baseurl: ""
+url: ""
+theme: minima
+twitter_username: imlinhanchao
+github_username:  imlinhanchao
 highlighter: rouge
 markdown: kramdown
 kramdown:
