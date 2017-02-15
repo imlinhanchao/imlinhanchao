@@ -11,23 +11,23 @@ layout: default
 
 首先通过计算星期的通用公式计算出输入年份的1月1日是星期几：
 
-{% highlight c %}
+```c
 iw = iy + (iy - 1) / 4 - (iy - 1) / 100 + (iy - 1) / 400;
 iw = iw - (iw / 7) * 7;
-{% endhighlight %}
+```
 由于年份存在一个闰年与否的问题，因此，单输入月份`>1`时，需要判断月份是否为闰年，给变量`ir` 赋值2月份的日期数：
 
-{% highlight c %}
+```c
 if (im > 1)
 {
 	if (((iy % 4 == 0) && (iy % 100 != 0)) || (iy % 400 == 0)) ir = 29;
 	else ir = 28;
 }
-{% endhighlight %}
+```
 
 那么，对于输出月历，只要知道了该月1号星期，则可输出整个月历。因此，我通过在1月1日星期数（现存于变量`iw`中）加上输入月份1号到1月1日天数再取余7，则可算出该月1日的星期数：
 
-{% highlight c %}
+```c
 switch(im)
 {
 	case 12:
@@ -59,17 +59,17 @@ switch(im)
 		goto stop;
 }
 iw=iw%7;
-{% endhighlight %}
+```
 
 针对不同月份的日期数，使用if语句判断分类，然后调用不同的mon 函数参数输出月历：
 
-{% highlight c %}
+```c
 if(im == 1 || im == 3 || im == 5 || im == 7 || im == 8 || im == 10 || im == 12)
 	mon(iw, 31);
-{% endhighlight %}
+```
 初始输出星期时，用空格将星期数分隔开，一个汉字占位两个空格符，因此每个日期占位三个空格符。而对于个位数日期，则需先输出俩个空格符：
 
-{% highlight c %}
+```c
 void mon30(int z,int day)
 {
 	int i,n;
@@ -89,12 +89,12 @@ void mon30(int z,int day)
 		}
 	}
 }
-{% endhighlight %}
+```
 这样，就可以输出某年某月的月历了~
 
 完整代码：
 
-{% highlight c %}
+```c
 #include<stdio.h>
 void mon(int z, int day)；
 void main()
@@ -177,7 +177,7 @@ void mon(int z, int day)
 		}
 	}
 }
-{% endhighlight %}
+```
 
 后记
 ---
