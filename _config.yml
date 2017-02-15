@@ -2,3 +2,9 @@ webrick:
   headers:
     My-Header: Hancel's Blog
     My-Other-Header: just make fun~
+	
+highlighter: rouge
+markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
