@@ -1,14 +1,21 @@
-webrick:
-  headers:
-    My-Header: Hancel's Blog
-    My-Other-Header: just make fun~
-baseurl: ""
-url: ""
-theme: minima
-twitter_username: imlinhanchao
-github_username:  imlinhanchao
-highlighter: rouge
-markdown: kramdown
-kramdown:
-  input: GFM
-  syntax_highlighter: rouge
+title:            Hancel's Blog
+description:      Just Make Fun~
+url:              /
+signoff:          Hancel.Lin
+facebook_appid:   imlinhanchao
+
+links:
+  - name:         About
+    url:          /about
+  - name:         Blog
+    url:          /
+    external:     true
+  - name:         GitHub
+    url:          http://github.com/imlinhanchao
+    external:     true
+highlighter:      pygments
+permalink:        pretty
+markdown:         redcarpet
+redcarpet:
+  extensions:
+    - smart
