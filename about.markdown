@@ -1,22 +1,23 @@
 ---
-title: about
+title: About me
 layout: page
 ---
 
-a
+I
 
-> Minimalist | Appleist | Unixer | Coder
+> write C++ about 5 years, make some fun in .NET, designed some web page, was a technical omnivore.
 
-who involved in 
+You can reach me by
 
-> [github](https://github.com/waynezhang)
+> [Github](https://github.com/imlinhanchao)  
+> [Coding](https://coding.net/u/imlinhanchao)  
+> [SegmentFault](https://segmentfault.com/u/imlinhanchao)  
 
-mail 
+Mail 
 
-> echo srvpqxfbyqfvpdtkbjwt | tr yxwvtsrqpkjfdb zuonmlihgeca@.
+> imlinhanchao#foxmail.com
 
-or follow 
+or Follow 
 
-> [@o_lll](https://twitter.com/#!/o_lll)
+> [@imlinhanchao](https://weibo.com/imlinhanchao)
 
-to reach me

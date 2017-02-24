@@ -19,7 +19,7 @@ guid: urn:uuid:7fbd5d95-7459-4c36-89f9-4a5ab3a713d2
 
 基类与派生类的析构函数应该为虚（即加`virtual`关键字）。例如：
 
-``` cpp
+```cpp
 #include<iostream.h>  
 class Base  
 {  
@@ -42,15 +42,19 @@ void main(void)
 <!--more-->
 
 输出结果为：
+
 ```
 ~Derived
 ~Base
 ```
+
 如果析构函数不为虚，那么输出结果为
+
 `~Base`
+
 在编写派生类的赋值函数时，注意不要忘记对基类的数据成员重新赋值。例如：
 
-``` cpp
+```cpp
 class Base  
 {  
    public:  

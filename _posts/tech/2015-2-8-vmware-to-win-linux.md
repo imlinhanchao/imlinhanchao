@@ -122,7 +122,7 @@ guid: urn:uuid:493280d7-615f-4e05-a73d-12659047f795
 
 啟動DOS後：
 
-``` bash
+```bash
 cd grub
 grub.exe
 ```
@@ -135,7 +135,7 @@ grub.exe
 
 先用cat指令查看硬盤分區（**cat後面有空格**）：
 
-``` bash
+```bash
 cat (hd0,
 ```
 
@@ -143,7 +143,7 @@ cat (hd0,
 
 ![grub_01](/media/files/vmware-to-win-linux/pic_16.jpg)
 
-``` bash
+```bash
 cat (hd0,1)/
 ```
 
@@ -157,13 +157,13 @@ cat (hd0,1)/
 
 然後將其設置為根目录
 
-``` bash
+```bash
 root (hd0,4)
 ```
 
 然後用kernel命令加載Linux內核
 
-``` bash
+```bash
 kernel (hd0,1)/vmlinuz-3.10.0-123.e17.x86_64 ro root=/dev/sda5
 ```
 
@@ -171,13 +171,13 @@ kernel (hd0,1)/vmlinuz-3.10.0-123.e17.x86_64 ro root=/dev/sda5
 
 接著設置initrd文件：
 
-``` bash
+```bash
 initrd (hd0,1)/initramfs-3.10.0-123.el7.x86_64.img
 ```
 
 然後就可以引導了。
 
-``` bash
+```bash
 boot
 ```
 
@@ -187,7 +187,7 @@ boot
 
 可是！難道每次我們進入系統都有打這麼一長串嗎？當然不是。我們現將liunx關機，然後**將grub裏面的menu.lst文件拷貝到DOS盤的根目錄**，然後在文件最後面加入：
 
-``` bash
+```bash
 title CentOS
 root (hd0,4)
 kernel (hd0,1)/vmlinuz-3.10.0-123.e17.x86_64 ro root=/dev/sda5
@@ -197,7 +197,7 @@ boot
 
 然後在autoexec.bat最後一行加上
 
-``` bash
+```bash
 call \grub\grub.exe
 ```
 
@@ -225,7 +225,7 @@ call \grub\grub.exe
 
 進入dos後，運行Ghost文件夾裏的ghost11.exe
 
-``` bash
+```bash
 cd ghost
 ghost11.exe
 ```
@@ -275,13 +275,13 @@ local>Partition>From Image
 
 bootmgr是引導Windows的入口，那麼啟動根目錄就要設置為bootmgr所在的分區，可以直接使用
 
-``` bash
+```bash
 root (hd0,6)
 ```
 
 設置根目錄，但其實下面這樣會更合理
 
-``` bash
+```bash
 find --set-root /bootmgr
 ```
 
@@ -289,7 +289,7 @@ find --set-root /bootmgr
 
 然後，將bootmgr裝載進來：
 
-``` bash
+```bash
 chainloader /bootmgr
 ```
 
@@ -297,7 +297,7 @@ chainloader /bootmgr
 
 那麼在menu.lst裏就是添加：
 
-``` bash
+```bash
 title Windows 7
 find --set-root /bootmgr
 chainloader /bootmgr
@@ -306,7 +306,7 @@ chainloader /bootmgr
 至此，DOS+Linux+Windows移動系統硬盤就搭建完畢啦~\*:‧\\(￣▽￣)/‧:\*
 最後，附上我的menu.lst文件
 
-``` bash 
+```bash 
 # This is a sample menu.lst file. You should make some changes to it.  
 # The old install method of booting via the stage-files has been removed.  
 # Please install GRLDR boot strap code to MBR with the bootlace.com  

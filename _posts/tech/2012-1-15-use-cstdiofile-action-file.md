@@ -20,7 +20,7 @@ guid: urn:uuid:c475d64f-c63e-48f5-8b28-8d7712129530
 打开文件
 ---
 
-``` cpp
+```cpp
 file.Open(sFileName, CFile::modeCreate | CFile::modeReadWrite | CFile::modeNoTruncate);  
 ```
 
@@ -36,14 +36,14 @@ file.Open(sFileName, CFile::modeCreate | CFile::modeReadWrite | CFile::modeNoTru
 读文件
 ---
 
-``` cpp
+```cpp
 file.ReadString(sLine);  
 ```
 
 将文件逐行读出，写入到`sLine`字符串里。
 如果需要读出文件所有内容，可以用下面的方法：
 
-``` cpp
+```cpp
 while(file.ReadString(sLine))  
 {  
     sFileData += sLine + "\r\n";  
@@ -54,14 +54,14 @@ while(file.ReadString(sLine))
 写入文件
 ---
 
-``` cpp
+```cpp
 file.WriteString(sLine);  
 ```
 
 这里很值得注意一下，如果文件的打开模式设置了`CFile::modeNoTruncate`，那么字符串将以追加的形式写入，并且是从文件指针现在所处位置写起。
 比如：
 
-``` cpp
+```cpp
 CString sFileName("test.txt"), sLine("");  
 CStdioFile file;  
 // 创建文件"test.txt"，写入"1234567890"  
@@ -87,6 +87,6 @@ MessageBox(sLine);
 ---
 每个打开的文件都需要关闭，否则天知道会出什么事儿~
 
-``` cpp
+```cpp
 file.Close();  
 ```

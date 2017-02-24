@@ -28,21 +28,21 @@ C语言通常使用`scanf`处理输入，如果要读取字符串，那么就需
 
 因此，我们准备两块内存指针：
 
-``` c
+```c
 char* str;
 char* _str;
 ```
 
 先给其中一个分配2个`char`的内存空间(一个用来存`\0`)，同时用i来记录输入字符串的个数。
 
-``` c
+```c
 int i = 1;
 str = (char*)malloc(sizeof(char) * (i + 1));
 ```
 
 然后，再用循环读取字符，并把它存到申请的内存空间。
 
-``` c
+```c
 while('\n' != (str[i - 1] = getchar()))
 {
      i++;
@@ -56,7 +56,7 @@ while('\n' != (str[i - 1] = getchar()))
 
 我们先给`_str`申请与`str`相同长的内存空间 。然后，把`str`的内容拷贝到_str里。这时，就可以把`str`释放掉了。在给`str`重新申请内存空间成功后，把`_str`的内容拷贝回来，然后释放掉`_str`就好了。
 
-``` c
+```c
 _str = (char*)malloc(strlen(str) + 1);
 str[i - 1] = '\0';
 strcpy(_str, str);
@@ -76,14 +76,14 @@ free(_str);
 
 最后，我们只要将`\0`加上，把`str`的内存地址返回，就大功告成了。
 
-``` c
+```c
 str[i - 1]='\0';
 return str;
 ```
 
 附上完整代码：
 
-``` c
+```c
 char* getstr()
 {
         char* str;

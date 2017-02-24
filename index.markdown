@@ -9,6 +9,9 @@ layout: default
     <section class="title">
       <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
     </section>
+    <section class="post">
+    {{ post.excerpt }}
+    </section>
     <section class="meta">
     <span class="time">
       <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
@@ -21,26 +24,11 @@ layout: default
     </span>
     {% endif %}
     </section>
-    <section class="post">
-    {{ post.excerpt | strip_html }}
-    </section>
     </article>
   {% endfor %}
   </ul>
   <div class="divider"></div>
   <ul class="listing main-listing">
-    <li class="listing-seperator">Happend earlier this year</i>
-  {% capture year %}{{ site.time | date:"%Y"}}{% endcapture %}
-  {% for post in site.posts offset:1 %}
-    {% capture y %}{{ post.date | date:"%Y"}}{% endcapture %}
-    {% if year != y %}
-    {% break %}
-    {% endif %}
-    <li class="listing-item">
-      <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
-      <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-    </li>
-  {% endfor %}
-    <li class="listing-seperator"><a href="/archive.html">Long long ago</a></li>
+    <li class="listing-seperator"><a href="/archive.html">More...</a></li>
   </ul>
 </div>

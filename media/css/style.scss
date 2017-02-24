@@ -10,7 +10,7 @@
  * --------------------------------- */
 
 @import url(/media/fonts/telex-regular.css);
-@import url(http://fonts.googleapis.com/css?family=Ubuntu:300);
+@import url(//fonts.lug.ustc.edu.cn/css?family=Ubuntu:300);
 @import url(//code.cdn.mozilla.net/fonts/fira.css);
 @import "media-queries";
 
@@ -37,10 +37,11 @@ hr { width: 4em; border: none; border-top: 1px dashed #d0d0d0; border-bottom: 1p
 .center { text-align: center; }
 ::selection { color: #fff; background-color: #333; }
 a { text-decoration: none; color: #bb2222; &:hover { color: #dd1144; }; }
-blockquote { background-color: #f8f8f8; padding: 0 1em; border: 1px dashed #eee !important; border-color: #e0e0e0 !important; font-size: 13px; line-height: 1.6; display: block; overflow: auto; }
+blockquote { background-color: #f8f8f8; padding: 0 1em; border-left: 5px solid #AAA !important; font-size: 13px; line-height: 1.6; display: block; overflow: auto; margin: 1em 0; }
 pre code { @extend blockquote; }
-code { background-color: #f8f8f8; padding: 2px 5px; border: 1px dashed #e0e0e0; font-family: #{$monospace}; }
-h1, h2 { font-size: 1.4em; }
+code { background-color: #d5d5d5; padding: 5px; border-radius: 2px; font-family: #{$monospace}; }
+h1 { font-size: 2em; }
+h2 { font-size: 1.4em; padding: .7em 0;}
 time { font-family: #{$time-font} }
 
 header {
@@ -57,6 +58,13 @@ header {
       font-family: #{$label-font};
       a { @extend a;
         color: #a9a9a9; display: block;
+        img {
+          width: 50px;
+          vertical-align: middle;
+          position: relative;
+          top: -.2em;
+          right: .2em;
+        }
       }
     }
   }
@@ -65,6 +73,7 @@ header {
     display: inline-block;
     position: relative;
     top: 1em;
+    margin-top: 1em;
     span { margin: .5em; }
     a {
       font-family: #{$label-font}; color: #ccc;
@@ -84,7 +93,7 @@ ul.listing {
     list-style-type:none;
     padding: 0;
     &.listing-item { a { padding: .2em 0 .2em 2em; } time { color: #999; } &:hover { background-color: #f9f9f9; } }
-    &.listing-seperator { font-family: #{$label-font}; &:before { content: "⭠ "; color: #ccc; } }
+    &.listing-seperator { font-family: #{$label-font}; &:before { content: "- "; color: #ccc; } }
   }
 }
 
