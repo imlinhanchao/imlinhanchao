@@ -1,15 +1,15 @@
 ---
 author: hancel.lin
-date: 2017-01-02
+date: 2017-01-06
 title: 维基百科镜像制作全解析
 tags: 
-	- 维基百科
-	- 反向代理
-	- Nginx
+    - 维基百科
+    - Nginx
+    - 反向代理
 category: tech
 status: publish
 layout: post
-guid: urn:uuid:27cfd837-1192-4cc4-8ad4-a16d2e4ed84d
+guid: urn:uuid:26ebfad7-6888-4784-85b1-dd317e080caf
 ---
 
 维基百科（Wikipedia）是一个自由的网络百科全书，包含了全球各地各个知识领域的各色百科知识。
@@ -20,6 +20,8 @@ guid: urn:uuid:27cfd837-1192-4cc4-8ad4-a16d2e4ed84d
 
 接下来，我们将来讲讲这个镜像的制作方式，以备某日我们提供的镜像失联你可以自行制作。
 
+<!--more-->
+
 ## 准备
 
 首先，你需要先准备：
@@ -28,7 +30,7 @@ guid: urn:uuid:27cfd837-1192-4cc4-8ad4-a16d2e4ed84d
 2. VPS上安装Linux系统；
 3. 系统内安装Nginx；
 4. Nginx带有*ngx_http_substitutions_filter_module*插件；
-<!--more-->
+
 ## 原理
 
 镜像实际上是对维基百科的反向代理，通过VPS作为代理，代替用户到真实的维基百科服务器拉取资源然后返回。
@@ -186,5 +188,3 @@ server {
 ## 预告
 
 但是，这样的车还是没有安全带的。为了安全，我们还要给网站上`https`。怎么让镜像支援`https`呢？且听下回分解。
-
-
