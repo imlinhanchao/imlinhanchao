@@ -2,14 +2,18 @@
 author: hancel.lin
 date: 2013-12-15
 title: 读取不定长字符串输入
-tags: C语言,字符串,输入
+tags: 
+    - C语言
+    - 字符串
+    - 输入
 category: tech
-layout: default
+layout: post
+guid: urn:uuid:40119f49-725f-4514-af1d-fc3a3888f269
 ---
 C语言通常使用`scanf`处理输入，如果要读取字符串，那么就需要定义一个字符数组（`char[]`）。可是，如果数组定义长度不足，就可能发生溢出。在C语言里有个可以用来读取字符的函数(`getchar`)，我们可以利用这个函数来实现不定长的字符串输入。下面我们就来讲讲如何做到这一点。
 
 首先，说一下原理：`getchar`每次只能读取一个字符。因此，我通过循环使用`getchar`逐个读取字符的方式，将所有输入字符读取。
-
+<!--more-->
 那么，我们要先解决一个问题：
 
 >什么时候结束循环不再读取呢？
@@ -24,27 +28,27 @@ C语言通常使用`scanf`处理输入，如果要读取字符串，那么就需
 
 因此，我们准备两块内存指针：
 
-{% highlight c %}
+``` c
 char* str;
 char* _str;
-{% endhighlight %}
+```
 
 先给其中一个分配2个`char`的内存空间(一个用来存`\0`)，同时用i来记录输入字符串的个数。
 
-{% highlight c %}
+``` c
 int i = 1;
 str = (char*)malloc(sizeof(char) * (i + 1));
-{% endhighlight %}
+```
 
 然后，再用循环读取字符，并把它存到申请的内存空间。
 
-{% highlight c %}
+``` c
 while('\n' != (str[i - 1] = getchar()))
 {
      i++;
      ...
 }
-{% endhighlight %}
+```
 
 每次我们读取到一个字符时，就将`i`加一。所以循环体开始的时候是`i++`（刚读完一个字符）。
 
@@ -52,7 +56,7 @@ while('\n' != (str[i - 1] = getchar()))
 
 我们先给`_str`申请与`str`相同长的内存空间 。然后，把`str`的内容拷贝到_str里。这时，就可以把`str`释放掉了。在给`str`重新申请内存空间成功后，把`_str`的内容拷贝回来，然后释放掉`_str`就好了。
 
-{% highlight c %}
+``` c
 _str = (char*)malloc(strlen(str) + 1);
 str[i - 1] = '\0';
 strcpy(_str, str);
@@ -66,20 +70,20 @@ if(NULL == str)
 }
 strcpy(str, _str);
 free(_str);
-{% endhighlight %}
+```
 
 值得注意的是，在给`str`重新申请内存空间后，需要判断一下`str`内存申请是否成功。如果失败（`NULL == str`），我们需要先将`_str`释放掉（防止出现内存泄漏），再`return NULL`。
 
 最后，我们只要将`\0`加上，把`str`的内存地址返回，就大功告成了。
 
-{% highlight c %}
+``` c
 str[i - 1]='\0';
 return str;
-{% endhighlight %}
+```
 
 附上完整代码：
 
-{% highlight c %}
+``` c
 char* getstr()
 {
         char* str;
@@ -106,4 +110,4 @@ char* getstr()
         str[i - 1] = '\0';
         return str;
 }
-{% endhighlight %}
+```

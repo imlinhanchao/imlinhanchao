@@ -2,9 +2,16 @@
 author: hancel.lin
 date: 2012-2-22
 title: 如何在派生类中实现类的基本函数
-tags: C++, 构造函数, 析构函数, 派生类, 继承, 赋值函数
+tags: 
+    - C++
+    - 构造函数
+    - 析构函数
+    - 派生类
+    - 继承
+    - 赋值函数
 category: tech
-layout: default
+layout: post
+guid: urn:uuid:7fbd5d95-7459-4c36-89f9-4a5ab3a713d2
 ---
 基类的构造函数、析构函数、赋值函数都不能被派生类继承。如果类之间存在继承关系，在编写上述基本函数时应注意以下事项：
 
@@ -12,7 +19,7 @@ layout: default
 
 基类与派生类的析构函数应该为虚（即加`virtual`关键字）。例如：
 
-{% highlight cpp %}
+``` cpp
 #include<iostream.h>  
 class Base  
 {  
@@ -31,7 +38,8 @@ void main(void)
    Base * pB = new Derived; // upcast  
    delete pB;  
 }  
-{% endhighlight %}
+```
+<!--more-->
 
 输出结果为：
 ```
@@ -42,7 +50,7 @@ void main(void)
 `~Base`
 在编写派生类的赋值函数时，注意不要忘记对基类的数据成员重新赋值。例如：
 
-{% highlight cpp %}
+``` cpp
 class Base  
 {  
    public:  
@@ -74,4 +82,4 @@ Derived & Derived::operate =(const Derived &other)
    //(4)返回本对象的引用  
    return *this;  
 }  
-{% endhighlight %}
+```

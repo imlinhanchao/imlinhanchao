@@ -1,21 +1,26 @@
-title:            Hancel's Blog
-description:      Just Make Fun~
-url:              /
-signoff:          Hancel.Lin
-facebook_appid:   imlinhanchao
+markdown: rdiscount
+highlighter: pygments
+permalink: /:year/:month/:day/:title.html
+name: "Hancel's Blog"
+markdown: rdiscount
 
-links:
-  - name:         About
-    url:          /about
-  - name:         Blog
-    url:          /
-    external:     true
-  - name:         GitHub
-    url:          http://github.com/imlinhanchao
-    external:     true
-highlighter:      pygments
-permalink:        pretty
-markdown:         redcarpet
-redcarpet:
-  extensions:
-    - smart
+author: "hancel.lin"
+atom-baseurl: "http://io.hancel.net"
+disqus: "hancel"
+
+excerpt_separator:  '<!--more-->'
+
+navigations:
+  - title: Archive
+    class: fa fa-list-ul
+    href: /archive.html
+  - title: Tags
+    class: fa fa-tags
+    href: /tags.html
+  - title: About
+    class: fa fa-user
+    href: /about.html
+  - title: Subscribe
+    class: fa fa-rss
+    href: /atom.xml
+
