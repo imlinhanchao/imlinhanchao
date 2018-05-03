@@ -15,11 +15,11 @@
 @import "media-queries";
 
 $font-name: "telexregular";
-$font: $font-name, "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+$font: "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
 $monospace: "Fira Mono", monospace;
 $label-font: $font-name, "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
 $time-font: "Ubuntu", monospace;
-$background-color: #f9f9f9;
+$background-color: #FFF;
 
 @mixin page {
   margin: 0 auto;
@@ -37,10 +37,10 @@ hr { width: 4em; border: none; border-top: 1px dashed #d0d0d0; border-bottom: 1p
 .center { text-align: center; }
 ::selection { color: #fff; background-color: #333; }
 a { text-decoration: none; color: #bb2222; &:hover { color: #dd1144; }; }
-blockquote { background-color: #f8f8f8; padding: 0 1em; border-left: 5px solid #AAA !important; font-size: 13px; line-height: 1.6; display: block; overflow: auto; margin: 1em 0; }
+blockquote { background-color: #f8f8f8; padding: 0 1em; border-left: 5px solid #AAA !important; font-size: 13px; line-height: 1.6; display: block; overflow: auto; margin: .2em 0; }
 pre code { @extend blockquote; }
 code { background-color: #d5d5d5; padding: 5px; border-radius: 2px; font-family: #{$monospace}; }
-h1 { font-size: 2em; }
+h1 { font-size: 2.5em; }
 h2 { font-size: 1.4em; padding: .7em 0;}
 time { font-family: #{$time-font} }
 
@@ -48,6 +48,7 @@ header {
   @include page;
   text-align: justify;
   margin: 3em auto;
+  user-select: none;
   &:after { content: ''; width: 100%; display: inline-block; }
 
   #header {
@@ -57,7 +58,7 @@ header {
     h1 {
       font-family: #{$label-font};
       a { @extend a;
-        color: #a9a9a9; display: block;
+        color: #38380f; display: block;
         img {
           width: 50px;
           vertical-align: middle;
@@ -76,7 +77,7 @@ header {
     margin-top: 1em;
     span { margin: .5em; }
     a {
-      font-family: #{$label-font}; color: #ccc;
+      font-family: #{$label-font}; color: #787878;
     }
   }
 }
@@ -100,6 +101,7 @@ ul.listing {
 article {
   margin: 2em 0;
   p { padding: .7em 0; }
+  pre { padding: .7em 0; }
   .title {
     font-family: #{$label-font};
     a { @extend a; color: #777; }
@@ -108,7 +110,7 @@ article {
   .meta {
     display: block;
     overflow: auto;
-    margin-top: -.5em;
+    margin-top: .5em;
     font-size: .9em;
     .tags a { @extend a; color: #999999; padding: .25em; }
   }

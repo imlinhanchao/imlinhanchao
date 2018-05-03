@@ -161,6 +161,7 @@ server {
 ```
 
 然后，主域名的反代也要修改一下：
+
 ```nginx
 server {
 	server_name w.domain.com;

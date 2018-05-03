@@ -5,7 +5,7 @@ layout: page
 
 I
 
-> write C++ about 5 years, make some fun in .NET, designed some web page, was a technical omnivore.
+> write C++ about 5 years, make some fun in .NET, designed some website, was a technical omnivore, will be an all-stack engineer.
 
 You can reach me by
 
@@ -19,5 +19,8 @@ Mail
 
 or Follow 
 
-> [@imlinhanchao](https://weibo.com/imlinhanchao)
+> [Weibo](https://weibo.com/linhanchao)  
+> [Douban](https://www.douban.com/people/imlinhanchao/)  
+> [Fackbook](https://www.facebook.com/imlinhanchao)  
 
+.

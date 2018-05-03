@@ -18,7 +18,7 @@
 
 body {
   font-size: 14px;
-  font-family: telexregular, Hiragino Sans GB, Microsoft YaHei, sans-serif;
+  font-family: Hiragino Sans GB, Microsoft YaHei, sans-serif;
   color: #555;
   background-color: #FFF;
   -webkit-font-smoothing: antialiased; }
@@ -61,12 +61,13 @@ blockquote, pre code {
 code {
   background-color: #d5d5d5;
   padding: 5px;
-  font-family: Fira Mono, monospace;
-  border-radius: 2px; }
+  border-radius: 2px;
+  font-family: Fira Mono, monospace; }
 
-h1 { 
+h1 {
   font-size: 2.5em; }
-h2 { 
+
+h2 {
   font-size: 1.4em;
   padding: .7em 0; }
 
@@ -76,7 +77,8 @@ time {
 header {
   margin: 0 auto;
   text-align: justify;
-  margin: 3em auto; }
+  margin: 3em auto;
+  user-select: none; }
   @media screen and (min-width: 320px) {
     header {
       width: 300px; } }
@@ -100,14 +102,14 @@ header {
     header #header h1 {
       font-family: telexregular, Hiragino Sans GB, Microsoft YaHei, sans-serif; }
       header #header h1 a {
-        color: #a9a9a9;
+        color: #38380f;
         display: block; }
         header #header h1 a img {
-            width: 50px;
-            vertical-align: middle;
-            position: relative;
-            top: -.2em;
-            right: .2em; }
+          width: 50px;
+          vertical-align: middle;
+          position: relative;
+          top: -.2em;
+          right: .2em; }
   header nav {
     display: inline-block;
     position: relative;
@@ -117,7 +119,7 @@ header {
       margin: .5em; }
     header nav a, header nav #header h1 a, header #header h1 nav a, header nav article .title a, article .title header nav a, header nav article .meta .tags a, article .meta .tags header nav a, header nav article .divider a, article .divider header nav a {
       font-family: telexregular, Hiragino Sans GB, Microsoft YaHei, sans-serif;
-      color: #ccc; }
+      color: #787878; }
 
 #content {
   margin: 0 auto;
@@ -158,6 +160,8 @@ article {
   margin: 2em 0; }
   article p {
     padding: .7em 0; }
+  article pre {
+    padding: .7em 0; }
   article .title {
     font-family: telexregular, Hiragino Sans GB, Microsoft YaHei, sans-serif; }
     article .title header #header h1 a, header #header h1 article .title a, article .title a, article .title .meta .tags a, article .meta .tags .title a {
@@ -165,7 +169,7 @@ article {
   article .meta {
     display: block;
     overflow: auto;
-    margin-top: -.5em;
+    margin-top: .5em;
     font-size: .9em; }
     article .meta .tags header #header h1 a, header #header h1 article .meta .tags a, article .meta .tags a {
       color: #999999;
