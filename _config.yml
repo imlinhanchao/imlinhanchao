@@ -1,11 +1,9 @@
-markdown: rdiscount
 highlighter: pygments
 permalink: /:year/:month/:day/:title.html
 name: "Hancel's Blog"
-markdown: rdiscount
 
 author: "hancel.lin"
-atom-baseurl: "http://io.hancel.net"
+atom-baseurl: "http://io.hancel.org"
 disqus: "hancel"
 
 excerpt_separator:  '<!--more-->'

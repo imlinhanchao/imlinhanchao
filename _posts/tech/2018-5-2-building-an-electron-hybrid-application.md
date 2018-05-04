@@ -1,7 +1,7 @@
 ---
 author: hancel.lin
 date: 2018-05-02
-title: 使用 node-ffi 构建 Electron 和 C++ Library 混合桌面应用
+title: 使用 node-ffi 构建 Electron 和 C++ Library 混合桌面应用
 tags:
     - electron
     - Node.js
@@ -69,7 +69,7 @@ console.log(`10 ÷ 3 = ${quotient} ...... ${remainder.deref()}`);
 ```
 关于 `ffi` 的其他类型，可以参考：https://github.com/ffi/ffi/wiki/Types
 
-# 数组参数的调用
+## 数组参数的调用
 对于参数有包含数组的函数，如：
 ```cpp
 int analysis(int number, int factor[]);
@@ -130,11 +130,11 @@ process.on('exit', function() {
 这样在程序退出前都会保持引用，就不会被垃圾回收了。
 
 
-参考资料：
-https://github.com/electron/electron/blob/master/docs/tutorial/using-native-node-modules.md
-https://github.com/node-ffi/node-ffi/wiki/Node-FFI-Tutorial
-https://gist.github.com/ryosuzuki/186958bf1abb0492f626
-https://github.com/node-ffi/node-ffi/issues/84
+## 参考资料：
+https://github.com/electron/electron/blob/master/docs/tutorial/using-native-node-modules.md  
+https://github.com/node-ffi/node-ffi/wiki/Node-FFI-Tutorial  
+https://gist.github.com/ryosuzuki/186958bf1abb0492f626  
+https://github.com/node-ffi/node-ffi/issues/84  
 
 
 

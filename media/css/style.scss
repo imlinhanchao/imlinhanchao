@@ -39,7 +39,7 @@ hr { width: 4em; border: none; border-top: 1px dashed #d0d0d0; border-bottom: 1p
 a { text-decoration: none; color: #bb2222; &:hover { color: #dd1144; }; }
 blockquote { background-color: #f8f8f8; padding: 0 1em; border-left: 5px solid #AAA !important; font-size: 13px; line-height: 1.6; display: block; overflow: auto; margin: .2em 0; }
 pre code { @extend blockquote; }
-code { background-color: #d5d5d5; padding: 5px; border-radius: 2px; font-family: #{$monospace}; }
+code { background-color: #d5d5d5; padding: 2px 5px; border-radius: 2px; font-family: #{$monospace}; }
 h1 { font-size: 2.5em; }
 h2 { font-size: 1.4em; padding: .7em 0;}
 time { font-family: #{$time-font} }
