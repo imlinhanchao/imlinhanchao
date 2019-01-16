@@ -15,6 +15,7 @@ guid: urn:uuid:2AA9A909-775A-41F4-866B-F0999EAD6BD5
 最近需要做一个自动化程序，需要自动进入安全模式后自动执行我的程序。找到资料只要在注册表`HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon`中的`Userinit`最后加上程序路径，就可以达到目的。
 
 嗯，操作注册表，是挺简单的。一顿操作猛如虎，就写好了。
+<!--more-->
 
 ```cpp
 const TCHAR* szSubKey= _T("SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Winlogon");
