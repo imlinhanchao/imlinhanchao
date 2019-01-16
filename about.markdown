@@ -5,7 +5,7 @@ layout: page
 
 I
 
-> write C++ about 5 years, make some fun in .NET, designed some website, was a technical omnivore, will be an all-stack engineer.
+> write C++ about 5 years, make some fun in Python, designed some website, was a technical omnivore, will be an all-stack engineer.
 
 You can reach me by
 
@@ -24,3 +24,6 @@ or Follow
 > [Fackbook](https://www.facebook.com/imlinhanchao)  
 
 .
+
+<p style="text-align:center;color:FFF;">Man is born free, but he is everywhere in chains.
+</p>
