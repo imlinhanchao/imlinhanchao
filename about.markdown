@@ -24,6 +24,4 @@ or Follow
 > [Fackbook](https://www.facebook.com/imlinhanchao)  
 
 .
-
-<p style="text-align:center;color:FFF;">Man is born free, but he is everywhere in chains.
-</p>
+<p style="text-align:center;font-style: italic;font-family: serif;font-size: 1.2em;color: #FFF;">&nbsp;Man is born free, but he is everywhere in chains.&nbsp;</p>
