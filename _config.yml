@@ -3,9 +3,10 @@ permalink: /:year/:month/:day/:title.html
 name: "Hancel's Blog"
 
 author: "hancel.lin"
-atom-baseurl: "http://io.hancel.org"
+atom-baseurl: "http://my.hancel.org"
 disqus: "hancel"
-
+description: "人生而自由，却无往不在枷锁之中"
+keyword: "Hancel, 工程师, C++, Web 前端, Python, imlinhanchao"
 excerpt_separator:  '<!--more-->'
 
 navigations:
