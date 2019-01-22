@@ -194,3 +194,13 @@ footer {
     text-align: center !important;
   }
 }
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0);
+  border-left: 1px solid #FFF;
+  border-top: 1px solid #FFF;
+}
