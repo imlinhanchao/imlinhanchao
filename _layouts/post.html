@@ -46,23 +46,21 @@ layout: default
 
   
   <section class="comment">
-  <div id="disqus_thread"></div>
-    <link rel="stylesheet" href="//dn-coding-net-public-file.qbox.me/Coding-Comments/v0.1.1/default.css">
-    <script type="text/javascript" src="//dn-coding-net-public-file.qbox.me/Coding-Comments/v0.1.1/gitment.min.js"></script>
     <div id="container"></div>
+    <link rel="stylesheet" href="/media/css/comment.css">
+    <script src="/media/js/gitment.browser.js"></script>
     <script>
-        var clientId = '04285adab9601302b87b88112033899b'
-        var clientSecret = '65675de0fb3e90eeca0a40e6ae6cc6ba1b9d97e1'
-        var gitment = new Gitment({
-          owner: 'imlinhanchao',
-          repo: 'blog',
-          oauth: {
-            client_id: clientId,
-            client_secret: clientSecret,
-          },
-        })
-        document.getElementById('container').appendChild(gitment.render())
-      </script>  
+    var gitment = new Gitment({
+      id: '{{ page.guid }}', // 可选。默认为 location.href
+      owner: 'imlinhanchao',
+      repo: 'imlinhanchao',
+      oauth: {
+        client_id: 'e9c2dfa916cae3082d7c',
+        client_secret: 'd4fdd92b43b5782938c51e3a02f7d809e178570e',
+      },
+    })
+    gitment.render('container')
+    </script>  
   </section>
   
   {% endif %}
