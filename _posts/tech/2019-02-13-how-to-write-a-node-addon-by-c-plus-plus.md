@@ -13,7 +13,7 @@ guid: urn:uuid:4afb4d9c-9808-488e-bb08-044b612db0e0
 ---
 
 想要开发一个 Node 的 C++ 扩展，首推死月大神的[《Node.js：来一打 C++ 扩展》](https://book.douban.com/subject/30247892/)。钻研了一个多月，记录一些心得如下：
-
+<!--more-->
 ## 开发环境
 
 首先自然的 [Node](http://nodejs.org)，推荐安装 [nvm](https://github.com/creationix/nvm)，这样就可以随时切换不同的 Node 版本。另外，为了编译后的扩展在 32 位系统也能使用，最好是安装 32 bit 的 Node。nvm 的指令可以指定，如：`nvm install 10.15.1 32`。
