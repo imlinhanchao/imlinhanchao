@@ -30,6 +30,6 @@ guid: urn:uuid:4afb4d9c-9808-488e-bb08-044b612db0e0
 
 这个错误只要设置一下 `npm_config_node_gyp` 的环境变量就可以了。值就是`node-gyp.js`的路径，通常在 Node 安装目录下的 `\node_modules\npm\node_modules\node-gyp\bin\node-gyp.js`。到 Windows 的环境变量新增一下就行。
 
-# 开发
+## 开发流程
 
 待续...
