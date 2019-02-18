@@ -21,12 +21,12 @@ guid: urn:uuid:4afb4d9c-9808-488e-bb08-044b612db0e0
 然后就是安装 [node-gyp](https://github.com/nodejs/node-gyp/)，根据其[安装教程](https://github.com/nodejs/node-gyp/#on-windows)，Windows 下除了安装 node-gyp ：`npm i -g node-gyp`，还需要在**管理员**权限下安装 windows-build-tools ：`npm install --global --production windows-build-tools`。
 
 安装完成之后，应该启动时（在 CMD 执行 node-gyp）可能会报错误：
-> if not defined npm_config_node_gyp (node "......\node_modules\node-gyp\bin\node-gyp.js"  )  else (node ""  )
-> internal/modules/cjs/loader.js:583
->    throw err;
->    ^
->
-> Error: Cannot find module '......\npm\node_modules\node_modules\node-gyp\bin\node-gyp.js'
+> if not defined npm_config_node_gyp (node "......\node_modules\node-gyp\bin\node-gyp.js"  )  else (node ""  )  
+> internal/modules/cjs/loader.js:583  
+>    throw err;  
+>    ^  
+>  
+> Error: Cannot find module '......\npm\node_modules\node_modules\node-gyp\bin\node-gyp.js'  
 
 这个错误只要设置一下 `npm_config_node_gyp` 的环境变量就可以了。值就是`node-gyp.js`的路径，通常在 Node 安装目录下的 `\node_modules\npm\node_modules\node-gyp\bin\node-gyp.js`。到 Windows 的环境变量新增一下就行。
 
