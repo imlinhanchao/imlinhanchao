@@ -32,4 +32,22 @@ guid: urn:uuid:4afb4d9c-9808-488e-bb08-044b612db0e0
 
 ## 开发流程
 
-待续...
+一个 Node C++ 扩展，包含三个部分：
+
+1. 实际功能代码；
+2. 扩展入口代码（addon.cc）；
+3. 编译配置（binding.gyp）；
+
+这里我们以 `ObjectWrap` 的方式开发一个 Windows ini C++ 扩展为例子作为说明。下面为目录结构：
+```
+├─inc
+|   ├─win-ini.h
+│   └─win-ini.cpp
+├─src
+|   ├─ini.h
+|   ├─ini.cc
+│   └─addon.cc
+└─binding.gyp
+```
+相关代码可以查看 [Github](https://github.com/imlinhanchao/node-addon-windows-ini)
+
