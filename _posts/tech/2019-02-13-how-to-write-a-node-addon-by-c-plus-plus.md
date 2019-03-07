@@ -51,3 +51,22 @@ guid: urn:uuid:4afb4d9c-9808-488e-bb08-044b612db0e0
 ```
 相关代码可以查看 [Github](https://github.com/imlinhanchao/node-addon-windows-ini)
 
+### 1. 编写 binding.gyp
+
+`binding.gyp` 相当于一个 makefile，用于定义项目的依赖项，编译的 C++ 文件等等。详细文档可以查看 [GYP Document](https://gyp.gsrc.io/docs/UserDocumentation.md)。
+
+在 C++ Node 扩展的项目里，必须设置 `target_name`（代表编译后的文件名），`sources`（代表需包含编译的文件）。此外还可以设置 `include_dirs` 头文件的包含文件夹。如果有需要包含动态链接库，还需要设置 `library_dirs`。
+
+那么，对于我们的示例项目，可以如下配置：
+
+```python
+{
+  "targets": [{
+    "target_name": "ini",
+    "sources": [ "src/addon.cc", "src/ini.cc", "inc/win-ini.cpp", "inc/common.cpp" ],
+    "include_dirs": [
+        "inc",
+    ]
+  }]
+}
+```
