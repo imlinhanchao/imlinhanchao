@@ -16,7 +16,7 @@ guid: urn:uuid:4afb4d9c-9808-488e-bb08-044b612db0e0
 <!--more-->
 ## 开发环境
 
-首先自然的 [Node](http://nodejs.org)，推荐安装 [nvm](https://github.com/creationix/nvm)，这样就可以随时切换不同的 Node 版本。另外，为了编译后的扩展在 32 位系统也能使用，最好是安装 32 bit 的 Node。nvm 的指令可以指定，如：`nvm install 10.15.1 32`。
+首先自然是安装 [Node](http://nodejs.org)，推荐安装 [nvm](https://github.com/creationix/nvm)，这样就可以随时切换不同的 Node 版本。另外，为了编译后的扩展在 32 位系统也能使用，最好是安装 32 bit 的 Node。nvm 的指令可以指定，如：`nvm install 10.15.1 32`。
 
 然后就是安装 [node-gyp](https://github.com/nodejs/node-gyp/)，根据其[安装教程](https://github.com/nodejs/node-gyp/#on-windows)，Windows 下除了安装 node-gyp ：`npm i -g node-gyp`，还需要在**管理员**权限下安装 windows-build-tools ：`npm install --global --production windows-build-tools`。
 
