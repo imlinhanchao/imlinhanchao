@@ -19,9 +19,9 @@ Mail
 
 or Follow 
 
-> [Weibo](https://weibo.com/linhanchao)  
+> [V2EX](https://www.v2ex.com/member/imlinhanchao)  
 > [Douban](https://www.douban.com/people/imlinhanchao/)  
-> [Fackbook](https://www.facebook.com/imlinhanchao)  
+> [Facebook](https://www.facebook.com/imlinhanchao)  
 
 .
 <p style="text-align:center;font-style: italic;font-family: serif;font-size: 1.2em;color: #FFF;">&nbsp;Man is born free, but he is everywhere in chains.&nbsp;</p>
