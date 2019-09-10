@@ -5,7 +5,7 @@ layout: page
 
 I
 
-> write C++ about 5 years, make some fun in Python, designed some website, was a technical omnivore, will be an all-stack engineer.
+> write C++ about <script>document.write(new Date().getFullYear() - 2012)</script> years, make some fun in Python, designed some website, was a technical omnivore, will be an all-stack engineer.
 
 You can reach me by
 
