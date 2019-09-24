@@ -43,7 +43,7 @@ RegCloseKey(hKey);
 首先，祭出[微软文档](https://docs.microsoft.com/en-us/windows/desktop/winprog64/accessing-an-alternate-registry-view)，第一段：
 >By default, a 32-bit application running on WOW64 accesses the 32-bit registry view and a 64-bit application accesses the 64-bit registry view. The following flags enable 32-bit applications to access redirected keys in the 64-bit registry view and 64-bit applications to access redirected keys in the 32-bit registry view. These flags have no effect on shared registry keys. For more information, see [Registry Keys Affected by WOW64](https://docs.microsoft.com/en-us/windows/desktop/winprog64/shared-registry-keys).
 
-微软对于运行在 64 位操作系统的 32 位应用程序，其实际上是在一个叫`WoW64`的子系统上运行的。那么在注册表里，则会分出一个叫`Wow6432Node`的节点，作为 32 位应用程序的重定向。那么默认情况下 32 位的应用程序，是会访问到`Wow6432Node`下的注册表的。当然不是所有注册表项都是如此，具体哪些受到影响，可以看上面的链接。
+微软对于运行在 64 位操作系统的 32 位应用程序，其实际上是在一个叫`WoW64`的子系统上运行的。那么在注册表里，则会分出一个叫`Wow6432Node`的节点，作为 32 位应用程序的重定向。那么默认情况下 32 位的应用程序，是会访问到`Wow6432Node`下的注册表的。当然不是所有注册表项都是如此，具体哪些受到影响，可以看上面的链接。
 
 为此，注册表访问权限掩码多了两种 Flag：
 
