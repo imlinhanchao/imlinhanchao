@@ -202,7 +202,7 @@ ul.listing {
     border-left: 2px solid #555;
 
     &::before {
-        content: "\f017"; /* fa-clock-o */
+        content: "\\f017"; /* fa-clock-o */
         font: normal normal normal 14px/1 FontAwesome;
         position: absolute;
         bottom: .9em;
@@ -210,7 +210,7 @@ ul.listing {
         font-size: 1.5em;
     }
     &::after {
-        content: "\f111"; /* fa-circle */
+        content: "\\f111"; /* fa-circle */
         font: normal normal normal 14px/1 FontAwesome;
         position: absolute;
         bottom: -.5em;
