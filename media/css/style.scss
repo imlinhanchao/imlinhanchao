@@ -210,6 +210,11 @@ ul.listing {
         left: -.5em;
         font-size: 1.5em;
     }
+
+    &.tags-list::before {
+        content: "\f02c"; /* fa-tags */
+    }
+
     &::after {
         content: "\f111"; /* fa-circle */
         font: normal normal normal 14px/1 FontAwesome;
