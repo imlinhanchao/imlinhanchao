@@ -211,8 +211,12 @@ ul.listing {
         font-size: 1.5em;
     }
 
-    &.tags-list::before {
-        content: "\f02c"; /* fa-tags */
+    &.tags-list{
+        margin-top: 1.5em;
+        &::before {
+            content: "\f02c"; /* fa-tags */
+            top: -.8em;
+        }
     }
 
     &::after {
