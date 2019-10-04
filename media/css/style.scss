@@ -199,8 +199,11 @@ header {
 
 ul.listing {
     margin-top: 1em;
-    border-left: 2px solid #555;
     position: relative;
+
+    &.post-list, &.tags-list {
+        border-left: 2px solid #555;
+    }
 
     &.post-list::before, &.tags-list::before {
         content: "\f017"; /* fa-clock-o */
