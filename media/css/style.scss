@@ -202,7 +202,7 @@ ul.listing {
     border-left: 2px solid #555;
     position: relative;
 
-    &::before {
+    &.post-list::before, &.tags-list::before {
         content: "\f017"; /* fa-clock-o */
         font: normal normal normal 14px/1 FontAwesome;
         position: absolute;
@@ -219,7 +219,7 @@ ul.listing {
         }
     }
 
-    &::after {
+    &.post-list::after, &.tags-list::after {
         content: "\f111"; /* fa-circle */
         font: normal normal normal 14px/1 FontAwesome;
         position: absolute;

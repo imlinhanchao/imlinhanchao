@@ -3,7 +3,7 @@ title: Archive
 layout: page
 ---
 
-<ul class="listing">
+<ul class="listing post-list">
 {% for post in site.posts %}
   {% capture y %}{{post.date | date:"%Y"}}{% endcapture %}
   {% if year != y %}
