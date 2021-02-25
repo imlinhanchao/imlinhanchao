@@ -12,7 +12,7 @@ You can reach me by
 > [GitHub](https://github.com/imlinhanchao)  
 > [Coding](https://coding.net/u/imlinhanchao)  
 > [SegmentFault](https://segmentfault.com/u/imlinhanchao)  
-> [Stackoverflow](https://stackoverflow.com/story/imlinhanchao)
+> [Stackoverflow](https://stackoverflow.com/story/imlinhanchao)  
 > [Visual Studio Marketplace](https://marketplace.visualstudio.com/publishers/hancel)
 
 Mail 
