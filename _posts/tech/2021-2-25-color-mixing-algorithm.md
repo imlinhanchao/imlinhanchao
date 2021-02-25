@@ -18,6 +18,8 @@ guid: urn:uuid:2157fd61-177c-4ad7-8b3c-f48fa9f1dca1
 
 ![示例](/media/files/color-mixing-algorithm/demo.png)
 
+<!--more-->
+
 因此，我们要能够对每一个像素点的颜色进行混色。混色的原理其实十分简单，已知底图像素颜色为 `c1`，半透明图像素点颜色为 `c2`，透明度 alpha 值为 `a`，不透明 alpha 值为 `a'`。那么也就是混色区域的颜色值 `c`，其 `c2` 颜色保留 `a / a'`，`c1` 颜色保留 `1 - a / a'`。那么就可以得出公式：
 
 ```
