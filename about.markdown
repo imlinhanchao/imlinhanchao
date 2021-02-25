@@ -12,6 +12,7 @@ You can reach me by
 > [Github](https://github.com/imlinhanchao)  
 > [Coding](https://coding.net/u/imlinhanchao)  
 > [SegmentFault](https://segmentfault.com/u/imlinhanchao)  
+> [Stackoverflow](https://stackoverflow.com/story/imlinhanchao)
 
 Mail 
 
@@ -22,6 +23,7 @@ or Follow
 > [V2EX](https://www.v2ex.com/member/imlinhanchao)  
 > [Douban](https://www.douban.com/people/imlinhanchao/)  
 > [Facebook](https://www.facebook.com/imlinhanchao)  
+> [Twitter](https://www.twitter.com/imlinhanchao)  
 
 .
 <p style="text-align:center;font-style: italic;font-family: serif;font-size: 1.2em;color: #FFF;">&nbsp;Man is born free, but he is everywhere in chains.&nbsp;</p>
