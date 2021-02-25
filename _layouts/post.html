@@ -47,19 +47,19 @@ layout: default
   
   <section class="comment">
     <div id="container"></div>
-    <link rel="stylesheet" href="/media/css/comment.css">
-    <script src="/media/js/gitment.browser.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+    <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
     <script>
-    var gitment = new Gitment({
+    var gitalk = new Gitalk({
       id: '{{ page.guid }}', // 可选。默认为 location.href
       owner: 'imlinhanchao',
       repo: 'imlinhanchao',
-      oauth: {
-        client_id: 'e9c2dfa916cae3082d7c',
-        client_secret: 'd4fdd92b43b5782938c51e3a02f7d809e178570e',
-      },
+      clientID: 'e9c2dfa916cae3082d7c',
+      clientSecret: 'd4fdd92b43b5782938c51e3a02f7d809e178570e',
+      admin: ['imlinhanchao'],
+      distractionFreeMode: true
     })
-    gitment.render('container')
+    gitalk.render('container')
     </script>  
   </section>
   
