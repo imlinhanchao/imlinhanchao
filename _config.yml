@@ -16,6 +16,9 @@ navigations:
   - title: Tags
     class: fa fa-tags
     href: /tags.html
+  - title: Application
+    class: fa fa-code
+    href: /app.html
   - title: About
     class: fa fa-user
     href: /about.html
