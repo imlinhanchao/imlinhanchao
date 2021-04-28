@@ -13,7 +13,7 @@ layout: post
 guid: urn:uuid:01ac9922-1de8-47e9-8bf3-a3070738afca
 ---
 
-因为平时常常使用 Node.js 写网站，为了方便部署写了这个基于 [Coding](https://coding.net/) WebHook 的自动部署应用：https://coding.net/u/imlinhanchao/p/deploy_node
+因为平时常常使用 Node.js 写网站，为了方便部署写了这个基于 [Coding](https://coding.net/) WebHook 的自动部署应用：https://imlinhanchao.coding.net/public/deploy_node/deploy_node/git
 <!--more-->
 
 ## 部署服务端
