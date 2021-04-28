@@ -186,4 +186,4 @@ void mon(int z, int day)
 
 后记
 ---
-时隔三年重制版：https://coding.net/u/imlinhanchao/p/lite-code/git/tree/master/calendar (2015-12-11)
+时隔三年重制版：https://imlinhanchao.coding.net/public/lite-code/lite-code/git/files/master/calendar (2015-12-11)
