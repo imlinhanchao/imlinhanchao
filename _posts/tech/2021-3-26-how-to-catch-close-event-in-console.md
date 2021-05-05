@@ -1,6 +1,6 @@
 ---
 author: hancel.lin
-date: 2021-03-17
+date: 2021-03-26
 title: 如何在 Windows 控制臺程序捕捉關閉消息
 tags: 
     - C#
