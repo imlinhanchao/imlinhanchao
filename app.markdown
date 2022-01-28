@@ -37,7 +37,7 @@ layout: page
 .post ul>li:hover strong {
     display: block;
 }
-.post ul>li a {
+.post ul>li>a {
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
@@ -87,7 +87,7 @@ layout: page
 
 
 <script>
-    Array.from(document.querySelectorAll('.post ul>li')).map(e => e.onmousemove = (ev) => {
+    Array.from(document.querySelectorAll('.post ul>li')).map(e => e.onmouseover = (ev) => {
         let target = ev.target
         if (ev.target.nodeName.toLowerCase() != 'li') target = target.parentNode;
         target.querySelector('strong').style.left = (ev.clientX - target.offsetLeft + 10) + 'px'
