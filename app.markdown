@@ -12,10 +12,13 @@ layout: page
     justify-content: space-between;
 }
 .post ul>li {
-    width: 22%;
+    width: 12%;
+    position: relative;
+    text-align: center;
 }
 .post ul>li img {
-    width: 100%;
+    width: 90%;
+    margin: 5%;
 }
 .post ul>li strong {
     font-weight: normal;
