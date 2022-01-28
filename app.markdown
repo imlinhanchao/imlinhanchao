@@ -56,6 +56,9 @@ layout: page
 - ![google-translate](/media/files/app/google-translate.png)  
   [Google Translate 扩展](https://marketplace.visualstudio.com/items?itemName=hancel.google-translate)  
   **基于 Google 翻译(cn)，无需科学上网，无需 API Key 的翻译扩展。**
+- ![serialport](/media/files/app/serialport.png)  
+  [Serial Port Helper](https://marketplace.visualstudio.com/items?itemName=hancel.serialport-helper)  
+  **一个可以在 VSCode 调试串口通信的扩展，支持 RX/TX。**
 - ![English](/media/files/app/eng.png)  
   [自考英语查询学习](https://eng.sxisa.com)  
   **自考英语二单词学习查询网站，支持笔记功能。**
@@ -65,6 +68,9 @@ layout: page
 - ![weixin-code](/media/files/app/weixin-code.png)  
   [微信公众号代码高亮扩展](https://chrome.google.com/webstore/detail/kbiedhbfjcadjlajanccenpiicgdbfaf)  
   **用于在微信公众平台文章编辑时插入带高亮格式代码，支持样式更改，行内代码与二次编辑。**
+- ![fishpi](/media/files/app/fishpi.png)  
+  [摸鱼派聊天室](https://marketplace.visualstudio.com/items?itemName=hancel.pwl-chat)  
+  **基于摸鱼打工人社区——[摸鱼派](https://fishpi.cn/)开放 API 开发的聊天室扩展，可以在里面边写 Bug 边愉快地吹水摸鱼。**
 - ![Resource](/media/files/app/res.png)  
   [资源站](https://res.sxisa.com)  
   **一个蒐集各种软件/影视/电子书籍资源下载的网站。**
@@ -74,6 +80,9 @@ layout: page
 - ![Librejo](media/files/app/librejo.png)  
   [Librejo 图书馆](https://librejo.cn/)  
   **个人图书馆网站，可以管理自己的图书与做笔记。**
+- ![mofish](media/files/app/mofish.jpg)  
+  [摸鱼大闯关](https://p.hancel.org/)  
+  **一个网页解谜网站，共 54 关。**
 
 
 
