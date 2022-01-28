@@ -9,16 +9,18 @@ layout: page
     padding: 0;
     flex-wrap: wrap;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 .post ul>li {
-    width: 12%;
+    width: 20%;
     position: relative;
     text-align: center;
+    margin: 2%;
+    min-width: 130px;
 }
 .post ul>li img {
-    width: 90%;
-    margin: 5%;
+    width: 60%;
+    margin: 20%;
 }
 .post ul>li strong {
     font-weight: normal;
@@ -41,7 +43,7 @@ layout: page
     white-space: nowrap;
     display: inline-block;
     width: 100%;
-    font-size: .4em;
+    font-size: .8em;
 }
 .post ul>li br {
     display: none;
