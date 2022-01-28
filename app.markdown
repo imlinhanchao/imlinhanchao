@@ -70,7 +70,7 @@ layout: page
   **用于在微信公众平台文章编辑时插入带高亮格式代码，支持样式更改，行内代码与二次编辑。**
 - ![fishpi](/media/files/app/fishpi.png)  
   [摸鱼派聊天室](https://marketplace.visualstudio.com/items?itemName=hancel.pwl-chat)  
-  **基于摸鱼打工人社区——[摸鱼派](https://fishpi.cn/)开放 API 开发的聊天室扩展，可以在里面边写 Bug 边愉快地吹水摸鱼。**
+  **基于摸鱼打工人社区[摸鱼派](https://fishpi.cn/)的开放 API 开发的聊天室扩展，可以在里面边写 Bug 边愉快地吹水摸鱼。**
 - ![Resource](/media/files/app/res.png)  
   [资源站](https://res.sxisa.com)  
   **一个蒐集各种软件/影视/电子书籍资源下载的网站。**
@@ -86,5 +86,11 @@ layout: page
 
 
 
-
-
+<script>
+    Array.from(document.querySelectorAll('.post ul>li')).map(e => e.onmousemove = (ev) => {
+        let target = ev.target
+        if (ev.target.nodeName.toLowerCase() != 'li') target = target.parentNode;
+        target.querySelector('strong').style.left = (ev.clientX - target.offsetLeft + 10) + 'px'
+        target.querySelector('strong').style.top = (ev.clientY - target.offsetTop + 10) + 'px'
+    }, false)
+</script>
