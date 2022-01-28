@@ -17,8 +17,31 @@ layout: page
 .post ul>li img {
     width: 100%;
 }
-.post ul>li b {
+.post ul>li strong {
     font-weight: normal;
+    position: absolute;
+    width: 200px;
+    background: rgba(254, 252, 253, .9);
+    border: 1px solid #5d5c5f;
+    padding: 1em;
+    display: none;
+    top: 50%;
+    left: 50%;
+    z-index: 2;
+}
+.post ul>li:hover strong {
+    display: block;
+}
+.post ul>li a {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    display: inline-block;
+    width: 100%;
+    font-size: .4em;
+}
+.post ul>li br {
+    display: none;
 }
 </style>
 
