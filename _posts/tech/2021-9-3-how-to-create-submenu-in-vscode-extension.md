@@ -14,7 +14,7 @@ guid: urn:uuid:ce26a7ee-2620-4417-9788-48ce908a3387
 ## 前言
 
 摸鱼派首帖，分享一点最近收获。开发 VSCode 扩展时遇到了添加右键二级菜单的问题，看了[官方文档](https://code.visualstudio.com/api/references/contribution-points#contributes.submenus)之后依然不得其解。反复实验之后终于理解文档所言，故整理分享。
-
+<!--more-->
 ## 右键菜单
 
 在开始之前，先讲一下如何添加右键菜单。右键菜单的添加是很简单的。只要配置 `package.json` 中的 `menus` 的 `editor/context` 添加 command 绑定即可。例如：
