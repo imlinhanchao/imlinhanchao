@@ -13,6 +13,7 @@ guid: urn:uuid:85c3c8c6-eed3-4e86-8595-7dfab6578ff6
 
 通过 Jenkins，我们可以实现代码的自动化部署，接下来，我们来看看如何安装和配置 Jenkins。
 
+<!--more-->
 ## 安装 Java
 
 目前最新版本的 Jenkins 依赖于 Java 11。我们需要安装 Java，CentOS 7 中执行 
@@ -35,7 +36,6 @@ sudo apt install openjdk-11-jdk
 
 安装 Java 完成后，执行 `java -version` 确认版本正确即可。
 
-<!--more-->
 ## 安装 Jenkins
 
 CentOS 执行下面指令：
