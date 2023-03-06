@@ -1,7 +1,7 @@
 ## Hi ~ I’m Hancel Lin. 👋  <a title="Hits" target="_blank" href="https://github.com/88250/hits"><img src="https://hits.b3log.org/imlinhanchao/hits.svg"></a>
 
 
-<img width="50%" align="right" src="https://github-readme-stats.vercel.app/api/?username=imlinhanchao&show_icons=true&title_color=fff&icon_color=79ff97&text_color=9f9f9f&bg_color=151515" />
+<img width="50%" align="right" src="https://github-readme-stats-sigma-five.vercel.app/api/?username=imlinhanchao&show_icons=true&title_color=fff&icon_color=79ff97&text_color=9f9f9f&bg_color=151515" />
 
 I am a R&D engineer at BYD. I mainly develop in the technical fields of C++ Windows, Web front-end and crawler.
 
