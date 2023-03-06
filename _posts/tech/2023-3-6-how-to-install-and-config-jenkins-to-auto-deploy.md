@@ -7,7 +7,7 @@ tags:
     - 部署
     - 自动化
 category: tech
-layout
+layout: post
 guid: urn:uuid:85c3c8c6-eed3-4e86-8595-7dfab6578ff6
 ---
 
