@@ -47,13 +47,13 @@ guid: urn:uuid:ce26a7ee-2620-4417-9788-48ce908a3387
 
 ```json
 {
+    "submenus": [
+        {
+            "id": "markdown-image.menulist",
+            "label": "Markdown 粘贴"
+        }
+    ],
     "menus": {
-        "submenus": [
-            {
-                "id": "markdown-image.menulist",
-                "label": "Markdown 粘贴"
-            }
-        ],
         "markdown-image.menulist": [
             {
                 "command": "markdown-image.paste",
