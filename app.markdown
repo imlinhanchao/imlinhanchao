@@ -68,7 +68,7 @@ layout: page
 - ![weixin-code](/media/files/app/weixin-code.png)  
   [微信公众号代码高亮扩展](https://chrome.google.com/webstore/detail/kbiedhbfjcadjlajanccenpiicgdbfaf)  
   **用于在微信公众平台文章编辑时插入带高亮格式代码，支持样式更改，行内代码与二次编辑。**
-- ![fishpi](/media/files/app/fishpi.png)  
+- ![fishpi](media/files/app/fishpi.png)  
   [摸鱼派聊天室](https://marketplace.visualstudio.com/items?itemName=hancel.pwl-chat)  
   **基于摸鱼打工人社区[摸鱼派](https://fishpi.cn/)的开放 API 开发的聊天室扩展，可以在里面边写 Bug 边愉快地吹水摸鱼。**
 - ![Resource](/media/files/app/res.png)  
@@ -83,6 +83,12 @@ layout: page
 - ![mofish](media/files/app/mofish.jpg)  
   [摸鱼大闯关](https://p.hancel.org/)  
   **一个网页解谜网站，共 54 关。**
+- ![storageEditor](media/files/app/storageditor.png)  
+  [Storage Editor](https://chrome.google.com/webstore/detail/lpmmcjhefcghagdhnpbodfdamfmlicfn)  
+  **一个用于编辑浏览器 LocalStorage 的 Chrome 扩展。**
+- ![Maze](media/files/app/maze.png)  
+  [迷宫 Maze](https://maze.hancel.org/)  
+  **一个网页迷宫游戏，你需要凭直觉找到出口。**
 
 
 
