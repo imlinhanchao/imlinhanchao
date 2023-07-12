@@ -20,7 +20,9 @@ layout: page
 }
 .post ul>li img {
     width: 60%;
-    margin: 20%;
+    margin: 20% 20% 5% 20%;
+    border-radius: 50%;
+    border: 1px solid #bb2222;
 }
 .post ul>li>a {
     overflow: hidden;
