@@ -19,6 +19,9 @@ navigations:
   - title: Application
     class: fa fa-code
     href: /app.html
+  - title: Friends
+    class: fa fa-envira
+    href: /friends.html
   - title: About
     class: fa fa-user
     href: /about.html
