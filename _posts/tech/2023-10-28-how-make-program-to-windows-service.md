@@ -12,7 +12,7 @@ guid: urn:uuid:8ebcea68-19f3-4107-a24f-5841c0b57886
 ---
 
 有时候我们需要在 Windows 常驻一个应用，同时还需要进行保活。那么我们就可以利用 Windows 的 Service 机制来实现这一点。那么有没有什么方法可以任意程序制作为 Windows Service 呢？我们可以利用开源项目 [winsw](https://github.com/winsw/winsw) 来实现。
-
+<!--more-->
 ## 准备
 
 在制作 Windows Service 前，我们需要准备一些东西：
