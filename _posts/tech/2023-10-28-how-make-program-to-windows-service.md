@@ -64,4 +64,4 @@ sc failure "Your Service Name" reset=5  actions=restart/3/restart/10/restart/60
 
 如果你是通过安装程序将服务安装到系统，则需要在卸载时将服务删除，执行`sc delete "Your Service Name"` 即可删除。这取决于你是用的哪个程序做安装包的打包。如果是 inno setup，则需要在 `UninstallRun` 添加。
 
-> 得空再写个 Sample 程序示例一下。
+> 这是一个 [sample](https://github.com/imlinhanchao/ServiceSample).
