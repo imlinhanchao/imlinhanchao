@@ -48,7 +48,7 @@ layout: page
 - ![Lemon](media/files/friends/Lemon.png)  
   [Lemon](https://chenxiaohui.eu.org/ "我年华虚度，空有一身疲惫")  
 - ![iwpz](media/files/friends/iwpz.png)    
-  [iwqz](https://iwpz.github.io/ "和平哥")  
+  [iwpz](https://iwpz.github.io/ "和平哥")  
 - ![stillwarter](media/files/friends/stillwarter.gif)  
   [stillwarter](https://stillwarter.github.io/ "可爱猫猫")
 
