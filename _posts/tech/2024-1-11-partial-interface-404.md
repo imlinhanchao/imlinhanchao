@@ -47,7 +47,7 @@ server {
 ```nginx
 location /system_name/ {
   rewrite /system_name/(.*) /$1 break;
-  proxy_pass http://192.168.0.100:9999;
+  proxy_pass http://192.168.0.100:9000;
 }
 ```
 
