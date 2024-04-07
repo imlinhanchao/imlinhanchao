@@ -21,7 +21,7 @@ guid: urn:uuid:68ea017c-40e8-4214-a433-ee54b8ca4b50
 
 ### 1.1 Editor 中创建 WebView
 
-在 Editor 中创建 WebView，可以使用 `vscode.window.createWebviewPanel` 方法。这个方法有四个参数：
+在 `vscode.window.createWebviewPanel` 方法中，有四个参数：
 
 - `viewType`：WebView 的类型，用于区分不同的 WebView。
 - `title`：WebView 的标题。
@@ -34,8 +34,8 @@ const panel = vscode.window.createWebviewPanel(
     'WebView 示例',
     vscode.ViewColumn.Beside,
     {
-        enableScripts: true,
-        localResourceRoots: [vscode.Uri.file(path.join(context.extensionPath))]
+        enableScripts: true, // 是否启用脚本
+        localResourceRoots: [vscode.Uri.file(path.join(context.extensionPath))] // 本地资源根目录
     }
 );
 ```
@@ -58,7 +58,7 @@ panel.webview.html = `
 `;
 ```
 
-这样，就可以在 Editor 中创建一个 WebView 了。可以把这部分代码放在一个 Command 中，然后通过 Command Palette 执行。
+这样，就可以在 Editor 中创建一个 WebView 了。可以把这部分代码放在一个 Command 中（Command 需要注册与定义），然后通过 Command Palette 执行。
 
 ```ts
 vscode.commands.registerCommand('webviewSample.show', () => {
@@ -92,9 +92,9 @@ vscode.commands.registerCommand('webviewSample.show', () => {
 
 ### 1.2 SideBar / Panel 中创建 WebView
 
-在 SideBar / Panel 中创建 WebView，需要使用 `vscode.window.registerWebviewViewProvider` 方法。这个方法有两个参数：
+在 SideBar / Panel 中创建 WebView，则是使用 `vscode.window.registerWebviewViewProvider` 方法。这个方法有两个参数：
 
-- `viewType`：WebView 的 Idhanc，用于区分不同的 WebView。
+- `viewType`：WebView 的 Id，用于区分不同的 WebView。
 - `provider`：一个 `vscode.WebviewViewProvider` 对象，主要是实现了 `resolveWebviewView` 方法。
 
 因此，你需要先实现一个 `WebviewViewProvider` ：
@@ -134,7 +134,7 @@ vscode.window.registerWebviewViewProvider('webviewSample', new WebviewSampleProv
       {
         "id": "webviewSidebar",
         "title": "WebView Sidebar",
-        "icon": "webviewSample.svg"
+        "icon": "webviewSample.svg" // 建议使用无色 svg 图标
       }
     ]
   }
@@ -150,16 +150,14 @@ vscode.window.registerWebviewViewProvider('webviewSample', new WebviewSampleProv
       {
         "id": "webviewSample", // 此处的 id 和 Webview 注册时填写的 viewType 一致
         "name": "WebView Sample",
-        "icon": "webviewSample.svg" // 建议使用无色 svg 图标
+        "type": "webview" // 视图类型为 webview
       }
     ]
   }
 }
 ```
 
-这样启动扩展，就可以在 SideBar 中看到一个 `webviewSample.svg` 的图标了，点击即可加载 `webviewSample` 的 Webview。
-
-如果是要在 Panel 中创建 WebView，只需要把 `activitybar` 改成 `panel` 即可。
+这样启动扩展，就可以在 SideBar 中看到一个 `webviewSample.svg` 的图标了，点击即可加载 `webviewSample` 的 Webview。如果是要在 Panel 中创建 WebView，只需要把 `activitybar` 改成 `panel` 即可。值得注意的是，视图容器的的类型是数组，也就是一个容器可以包含多个视图。在 Sidebar 中，多个视图会使用纵向排列，而在 Panel 中，多个视图会使用横向排列。多个视图的话，视图是可以折叠的，默认为展开，如果需要初始化时为折叠，则可以通过配置 `visibility` 为 `collapsed` 来折叠。
 
 ## 2. WebView 通信
 
@@ -176,7 +174,7 @@ vscode.postMessage({ command: 'alert', text: 'Hello VSCode!' });
 在 VSCode 中，可以通过 `webview` 对象的 `onDidReceiveMessage` 方法监听 WebView 发送的消息。`webview` 对象分别在 `WebviewPanel` 和 `WebviewView` 中取得。
 
 ```ts
-panel.webview.onDidReceiveMessage(message => {
+webview.onDidReceiveMessage(message => {
     switch (message.command) {
         case 'alert':
             vscode.window.showInformationMessage(message.text);
@@ -205,6 +203,8 @@ window.addEventListener('message', event => {
 ```
 
 这样，就可以实现 WebView 和 VSCode 之间的通信了。
+
+此外，`vscode` 对象不仅有 `postMessage` 方法，还有 `getState` 和 `setState` 方法，可以用来保存 WebView 的状态。这样，就可以在 WebView 的生命周期中保存一些状态了。
 
 ## 3. WebView 生命周期
 
@@ -371,6 +371,21 @@ window.addEventListener('message', event => {
 3. 将消息通信转发给 iframe 内页面，以及将 iframe 内页面的消息转发给扩展 Host。
 
 而框架网页，则需要再全局加上一句：`window.vscode = window.acquireVsCodeApi ? window.acquireVsCodeApi() : window.parent;`，这样就可以在框架中使用 `vscode` 对象了。
+
+此外，还需要接收 `style` 消息，将 vscode 的默认样式应用到框架网页中。
+
+```js
+window.addEventListener('message', (event) => {
+  const message = event.data;
+  switch (message.command) {
+    case 'style': {
+      // 接受 iframe 父窗体转发的 VSCode html 注入的 style
+      document.querySelector('html')!.setAttribute('style', message.data);
+      break;
+    }
+  }
+});
+```
    
 这样，调试时，我们可以先启动本地服务，然后再启动 VSCode 扩展，这样就可以在 WebView 中调试 React，Vue 等前端框架了。而打包时，只需要将打包输出目录配置为扩展的打包目录，然后在 `.vscodeignore` 中配置中间层的目录忽略打包即可。
 
@@ -407,7 +422,7 @@ return fs.readFileSync(mainHtml).toString().replace(/<base href="[^"]*">/,
 
 ## 6. 最后
 
-可能看完文章你还是云里雾里，不过没关系，这里准备了一个 `Vue3 + Element Plus` 样例工程，你可以参考这个工程来快速编写一个使用 WebView 的 VSCode 扩展。
+可能看完文章你还是云里雾里，不过没关系，这里准备了一个 `Vue3 + Element Plus` [样例工程](https://github.com/imlinhanchao/vsc-webview-template)，你可以参考这个工程来快速编写一个使用 WebView 的 VSCode 扩展。
 
-https://github.com/imlinhanchao/vsc-webview-sample
+
 
