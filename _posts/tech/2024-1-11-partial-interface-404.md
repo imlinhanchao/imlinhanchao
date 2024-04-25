@@ -11,7 +11,7 @@ layout: post
 guid: urn:uuid:f9d90d1b-8e3d-44b6-b8c0-d246f94e4e28
 ---
 
-> 前言：这是捉鬼记系列的第二篇，如果你还没看过第一篇，可以看看：[捉鬼记（一）—— ERR_INSUFFICIENT_RESOURCES](/tech/2023/12/25/ERR_INSUFFICIENT_RESOURCES.html)
+> 前言：这是捉鬼记系列的第二篇，如果你还没看过第一篇，可以看看：[捉鬼记（一）—— ERR_INSUFFICIENT_RESOURCES](/2023/12/25/ERR_INSUFFICIENT_RESOURCES.html)
 
 又是某日周五，本来已经收拾好了东西准备下班，路过同事的时候，瞥了一眼，就被拦下了。
 
