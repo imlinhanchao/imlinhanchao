@@ -89,13 +89,13 @@ layout: page
 - ![Maze](media/files/app/maze.svg)  
   [迷宫 Maze](https://maze.hancel.org/)  
   **一个网页迷宫游戏，你需要凭直觉找到出口。**
-- ![Sticky Notes](media/files/app/sticky.png)  
+- ![Sticky Notes](media/files/app/sticky.svg)  
   [Sticky Notes](https://github.com/imlinhanchao/sticky_notes)  
   **一个 Windows 桌面应用，可以用来记录你的工作事项，然后钉在桌面上，随时可以查看修改。**
-- ![Vue 国际化开发助手](media/files/app/vue-i18n.png)  
+- ![Vue 国际化开发助手](media/files/app/vue-i18n.svg)  
   [Vue 国际化开发助手](https://marketplace.visualstudio.com/items?itemName=hancel.front-i18n)  
   **VSCode 扩展，快速为中文 Vue 项目添加国际化支持。**
-- ![Timepack](media/files/app/time-pack.svg)  
+- ![Timepack](media/files/app/timepack.svg)  
   [Time 时间胶囊](https://time-pack.com/)  
   **时间胶囊小程序，封存记忆，送给未来。**
 
