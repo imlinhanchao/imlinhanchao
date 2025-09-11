@@ -40,7 +40,7 @@ layout: page
 - ![adlered](media/files/friends/adlered.png)  
   [adlered](https://www.stackoverflow.wiki "贼拉正经的技术博客~")  
 - ![csfwff](media/files/friends/csfwff.png)  
-  [csfwff](https://www.sszsj.cc/ "鼠鼠在碎觉，请勿打扰~")  
+  [csfwff](https://www.sszsj.com/ "鼠鼠在碎觉，请勿打扰~")  
 - ![Gakkiyomi](media/files/friends/Gakkiyomi.png)  
   [Gakkiyomi](http://gakkiyomi.me/ "为往圣继绝学~")  
 - ![Yui](media/files/friends/Yui.gif)  
