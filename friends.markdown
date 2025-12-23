@@ -51,6 +51,8 @@ layout: page
   [iwpz](https://iwpz.net/ "和平哥")  
 - ![stillwarter](media/files/friends/stillwarter.gif)  
   [stillwarter](https://stillwarter.github.io/ "可爱猫猫")
+- ![cooooing](https://avatars.githubusercontent.com/u/75006169)  
+  [咕咕咕](https://cooooing.github.io/ "路漫漫其修远兮，吾将上下而求索。")
 
 <script>
     Array.from(document.querySelectorAll('.post ul>li')).map(e => e.onmouseover = (ev) => {
