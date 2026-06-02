@@ -1,6 +1,6 @@
 ---
 author: hancel.lin
-date: 2023-8-16
+date: 2025-8-16
 title: 多彩灯光算法
 tags: 
     - 灯光
