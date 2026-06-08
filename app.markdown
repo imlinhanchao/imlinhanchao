@@ -98,6 +98,16 @@ layout: page
 - ![Timepack](media/files/app/timepack.svg)  
   [Time 时间胶囊](https://time-pack.com/)  
   **时间胶囊小程序，封存记忆，送给未来。**
+- ![文字冒险故事](media/files/app/adventext.svg)
+  [千屿引擎](https://adventext.fun)
+  **来创作文字冒险游戏的在线编辑器以及运行游戏的引擎。**
+- ![WJU Puzzle](media/files/app/wju.png)
+  [WJU 谜题](https://wju.adventext.fun)
+  **WJU 谜题是一个从集异壁中脱胎出来的游戏。**
+- ![Growth](media/files/app/growth.svg)
+  [成长日记](https://github.com/imlinhanchao/growth-diary)
+  **一个用于记录孩子从出生到现在的成长日记应用。**
+  
 
 
 <script>
